@@ -1,3 +1,5 @@
+package Controle;
+import Visao.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 

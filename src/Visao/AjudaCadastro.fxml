@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControleAjudaCadastro">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ControleAjudaCadastro">
    <children>
       <Label layoutX="159.0" layoutY="27.0" text="Ajuda de cadastro">
          <font>
@@ -19,7 +19,7 @@
       </Label>
       <ImageView fitHeight="277.0" fitWidth="364.0" layoutX="210.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Imagens/AjudaCadastro1.png" />
+            <Image url="@../Imagens/AjudaCadastro1.png" />
          </image>
       </ImageView>
       <GridPane layoutX="10.0" layoutY="90.0" prefHeight="134.0" prefWidth="177.0">
@@ -103,7 +103,7 @@
       <Button layoutX="47.0" layoutY="351.0" mnemonicParsing="false" onAction="#voltarParaMenu" text="Voltar" />
       <ImageView fitHeight="78.0" fitWidth="85.0" layoutX="47.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Imagens/support-avatar_icon-icons.com_53645-removebg-preview.png" />
+            <Image url="@../Imagens/support-avatar_icon-icons.com_53645-removebg-preview.png" />
          </image>
       </ImageView>
       <ImageView fitHeight="50.0" fitWidth="48.0" layoutX="526.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">

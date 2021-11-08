@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="AncherPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="357.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControleCadastro">
+<AnchorPane fx:id="AncherPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="357.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ControleCadastro">
    <children>
       <Label layoutX="105.0" layoutY="25.0" text="Cadastro de usuário">
          <font>
@@ -74,7 +74,7 @@
       <Button layoutX="245.0" layoutY="343.0" mnemonicParsing="false" onAction="#concluirCadastro" text="Cadastrar" />
       <ImageView fitHeight="46.0" fitWidth="51.0" layoutX="42.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Imagens/tab_client_icon-icons.com_72436.png" />
+            <Image url="@../Imagens/tab_client_icon-icons.com_72436.png" />
          </image>
       </ImageView>
    </children>

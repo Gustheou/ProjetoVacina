@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="432.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControleMenu">
+<AnchorPane prefHeight="432.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ControleMenu">
    <children>
       <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="600.0">
          <children>
@@ -54,7 +54,7 @@
       <Label layoutX="197.0" layoutY="297.0" text="Não possui cadastro? Clique" />
       <ImageView fitHeight="95.0" fitWidth="133.0" layoutX="253.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@Imagens/building_construction_control_protection_security_-20-51_icon-icons.com_60302.png" />
+            <Image url="@../Imagens/building_construction_control_protection_security_-20-51_icon-icons.com_60302.png" />
          </image>
       </ImageView>
       <PasswordField fx:id="senhaTextField" layoutX="229.0" layoutY="204.0" style="-fx-background-radius: 20;" />
