@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="432.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ControleMenu">
+   <children>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="600.0">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="Menu">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#cadastrarUsuarioMenuBar" text="Cadastrar" />
+                        <MenuItem mnemonicParsing="false" text="Pesquisar usuário" />
+                        <MenuItem mnemonicParsing="false" text="Listar cadastro" />
+                        <MenuItem mnemonicParsing="false" text="Remover cadastro" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Ajuda">
+                  <items>
+                    <MenuItem mnemonicParsing="false" onAction="#ajudaCadastroMenuBar" text="Como cadastrar" />
+                        <MenuItem mnemonicParsing="false" text="Como pesquisar um usúario" />
+                        <MenuItem mnemonicParsing="false" text="Como listar todos usúarios cadastrados" />
+                        <MenuItem mnemonicParsing="false" text="Como remover um usuário" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </VBox>
+      <Label accessibleRole="BUTTON" layoutX="351.0" layoutY="297.0" onMouseClicked="#cadastrarUsuario" text="aqui!" textFill="#112bd0" />
+      <Label layoutX="177.0" layoutY="162.0" text="Login:">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="177.0" layoutY="208.0" text="Senha:">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="loginTextField" layoutX="226.0" layoutY="158.0" style="-fx-background-radius: 20;" />
+      <Label layoutX="197.0" layoutY="297.0" text="Não possui cadastro? Clique" />
+      <ImageView fitHeight="95.0" fitWidth="133.0" layoutX="253.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Imagens/building_construction_control_protection_security_-20-51_icon-icons.com_60302.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="senhaTextField" layoutX="229.0" layoutY="204.0" style="-fx-background-radius: 20;" />
+      <Button layoutX="272.0" layoutY="247.0" mnemonicParsing="false" onAction="#logarButton" text="Logar" />
+      <Label layoutX="196.0" layoutY="330.0" text="Esqueceu sua senha? Clique" />
+      <Label accessibleRole="BUTTON" layoutX="348.0" layoutY="330.0" onMouseClicked="#esqueceuSenha" text="aqui!" textFill="#112bd0" />
+   </children>
+</AnchorPane>
