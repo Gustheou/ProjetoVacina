@@ -38,11 +38,23 @@ public class ControleCadastro {
             String endereco = enderecoTextField.getText();
             String password = senhaTextField.getText();
             String email = emailTextField.getText();
-            JOptionPane.showMessageDialog(null, "Cadastro efetuado com sucesso!\nLogin: "+ cpf +"\nSenha: "+ password);
+            if (nome.equals("") || dataDeNascimento.equals("") || cpf.equals("") || endereco.equals("") || password.equals("") || email.equals("")) {
+                JOptionPane.showMessageDialog(null, "          Error Code: 604\n\nCadastro não foi efetuado. (′⌒`)\nMotivo: Informações incompletas.");
+            } else {
+                JOptionPane.showMessageDialog(null, "Cadastro efetuado com sucesso!\nLogin: "+ cpf +"\nSenha: "+ password);
+                //A partir dessa linha, será escrita no arquivo.
+            }
             App.changeScreenMenu(event);
+            
         } catch (Exception e) {
-            //TODO: handle exception
+            
         }
+        nomeTextField.setText("");
+        dataDeNascimentoTextField.setText("");
+        cpfTextField.setText("");
+        enderecoTextField.setText("");
+        senhaTextField.setText("");
+        emailTextField.setText("");
         
         
     }
