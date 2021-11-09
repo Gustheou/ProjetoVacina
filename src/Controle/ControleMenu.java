@@ -17,19 +17,30 @@ public class ControleMenu {
 
     @FXML AnchorPane AnchorPane;
 
+    //Aba de ajuda
+    @FXML
+    void ajudaCadastroMenuBar() {
+        App.changeScreenAjudaCadastro();
+    }
+
+    @FXML
+    void ajudaPesquisarUsuarioMenuBar(ActionEvent event) {
+        App.changeScreenAjudaPesquisarUsuario();
+    }
+
+    @FXML
+    void ajudaRemoverCadastroMenuBar(ActionEvent event) {
+        App.changeScreenAjudaRemoverCadastro();
+    }
+    //Clique aqui
     @FXML
     void cadastrarUsuario(MouseEvent event) throws IOException {
         App.changeScreenCadastro(event);
     }
-
+    //Aba do menu
     @FXML
     void cadastrarUsuarioMenuBar() {
         App.changeScreenCadastro();
-    }
-
-    @FXML
-    void ajudaCadastroMenuBar() {
-        App.changeScreenAjudaCadastro();
     }
 
     @FXML
@@ -45,6 +56,11 @@ public class ControleMenu {
     @FXML
     void pesquisarCadastroMenuBar(ActionEvent event) {
         App.changeScreenPesquisarUsuario();
+    }
+
+    @FXML
+    void removerCadastroMenuBar(ActionEvent event) {
+        App.changeScreenRemoverCadastro();
     }
 
 }

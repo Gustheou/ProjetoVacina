@@ -15,6 +15,9 @@ public class App extends Application{
     private static Scene ajudaCadastro;
     private static Scene esqueceuSenha;
     private static Scene pesquisarUsuario;
+    private static Scene ajudaPesquisarUsuario;
+    private static Scene removerCadastro;
+    private static Scene ajudaRemoverCadastro;
 
     public static void main(String[] args) throws Exception {
         launch (args);
@@ -34,6 +37,12 @@ public class App extends Application{
         esqueceuSenha = new Scene (fxmlEsqueceuSenha);
         Parent fxmlPesquisarUsuario = FXMLLoader.load(getClass().getResource("PesquisarUsuario.fxml"));
         pesquisarUsuario = new Scene (fxmlPesquisarUsuario);
+        Parent fxmlAjudaPesquisarUsuario = FXMLLoader.load(getClass().getResource("AjudaPesquisarUsuario.fxml"));
+        ajudaPesquisarUsuario = new Scene (fxmlAjudaPesquisarUsuario);
+        Parent fxmlRemoverCadastro = FXMLLoader.load(getClass().getResource("RemoverCadastro.fxml"));
+        removerCadastro = new Scene (fxmlRemoverCadastro);
+        Parent fxmlAjudaRemoverCadastro = FXMLLoader.load(getClass().getResource("AjudaRemoverCadastro.fxml"));
+        ajudaRemoverCadastro = new Scene (fxmlAjudaRemoverCadastro);
 
         cenario.setScene(mainScene);
         cenario.show();   
@@ -61,6 +70,18 @@ public class App extends Application{
 
     public static void changeScreenPesquisarUsuario() {
         stage.setScene(pesquisarUsuario);
+    }
+
+    public static void changeScreenRemoverCadastro() {
+        stage.setScene(removerCadastro);
+    }
+
+    public static void changeScreenAjudaPesquisarUsuario() {
+        stage.setScene(ajudaPesquisarUsuario);
+    }
+
+    public static void changeScreenAjudaRemoverCadastro() {
+        stage.setScene(ajudaRemoverCadastro);
     }
 }
 

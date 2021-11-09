@@ -24,15 +24,15 @@
                     <MenuItem mnemonicParsing="false" onAction="#cadastrarUsuarioMenuBar" text="Cadastrar" />
                         <MenuItem mnemonicParsing="false" onAction="#pesquisarCadastroMenuBar" text="Pesquisar usuário" />
                         <MenuItem mnemonicParsing="false" text="Listar cadastro" />
-                        <MenuItem mnemonicParsing="false" text="Remover cadastro" />
+                        <MenuItem mnemonicParsing="false" onAction="#removerCadastroMenuBar" text="Remover cadastro" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Ajuda">
                   <items>
                     <MenuItem mnemonicParsing="false" onAction="#ajudaCadastroMenuBar" text="Como cadastrar" />
-                        <MenuItem mnemonicParsing="false" text="Como pesquisar um usúario" />
+                        <MenuItem mnemonicParsing="false" onAction="#ajudaPesquisarUsuarioMenuBar" text="Como pesquisar um usúario" />
                         <MenuItem mnemonicParsing="false" text="Como listar todos usúarios cadastrados" />
-                        <MenuItem mnemonicParsing="false" text="Como remover um usuário" />
+                        <MenuItem mnemonicParsing="false" onAction="#ajudaRemoverCadastroMenuBar" text="Como remover um usuário" />
                   </items>
                 </Menu>
               </menus>

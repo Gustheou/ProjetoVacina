@@ -1,5 +1,6 @@
 package Controle;
 
+import Visao.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -31,6 +32,14 @@ public class ControlePesquisarUsuario {
     private GridPane gridPane;
 
     @FXML
+    void voltarButton(ActionEvent event) {
+        App.changeScreenMenu(event);
+        nomeTextField.setText("");
+        cpfTextField.setText("");
+        gridPane.setVisible(false);
+    }
+
+    @FXML
     void pesquisarButton(ActionEvent event) {
         try {
             String nome = ""; //Pesquisar nome nos arquivos
@@ -43,7 +52,7 @@ public class ControlePesquisarUsuario {
             //mostrarVacinasText.setText(vacina);   Como mostrar as vacinas??? (Colocar um botao e listar pelo JOptionPane?)
             gridPane.setVisible(true);
         } catch (Exception e) {
-            //TODO: handle exception
+
         }
     }
 

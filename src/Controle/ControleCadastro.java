@@ -42,9 +42,9 @@ public class ControleCadastro {
                 JOptionPane.showMessageDialog(null, "          Error Code: 604\n\nCadastro não foi efetuado. (′⌒`)\nMotivo: Informações incompletas.");
             } else {
                 JOptionPane.showMessageDialog(null, "Cadastro efetuado com sucesso!\nLogin: "+ cpf +"\nSenha: "+ password);
+                App.changeScreenMenu(event);
                 //A partir dessa linha, será escrita no arquivo.
             }
-            App.changeScreenMenu(event);
             
         } catch (Exception e) {
             
