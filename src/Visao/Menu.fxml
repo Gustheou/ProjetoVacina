@@ -22,7 +22,7 @@
                 <Menu mnemonicParsing="false" text="Menu">
                   <items>
                     <MenuItem mnemonicParsing="false" onAction="#cadastrarUsuarioMenuBar" text="Cadastrar" />
-                        <MenuItem mnemonicParsing="false" text="Pesquisar usuário" />
+                        <MenuItem mnemonicParsing="false" onAction="#pesquisarCadastroMenuBar" text="Pesquisar usuário" />
                         <MenuItem mnemonicParsing="false" text="Listar cadastro" />
                         <MenuItem mnemonicParsing="false" text="Remover cadastro" />
                   </items>

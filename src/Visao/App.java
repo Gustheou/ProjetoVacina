@@ -14,6 +14,7 @@ public class App extends Application{
     private static Scene cadastroScene;
     private static Scene ajudaCadastro;
     private static Scene esqueceuSenha;
+    private static Scene pesquisarUsuario;
 
     public static void main(String[] args) throws Exception {
         launch (args);
@@ -31,6 +32,8 @@ public class App extends Application{
         ajudaCadastro = new Scene (fxmlAjudaCadastro);
         Parent fxmlEsqueceuSenha = FXMLLoader.load(getClass().getResource("EsqueceuSenha.fxml"));
         esqueceuSenha = new Scene (fxmlEsqueceuSenha);
+        Parent fxmlPesquisarUsuario = FXMLLoader.load(getClass().getResource("PesquisarUsuario.fxml"));
+        pesquisarUsuario = new Scene (fxmlPesquisarUsuario);
 
         cenario.setScene(mainScene);
         cenario.show();   
@@ -54,6 +57,10 @@ public class App extends Application{
 
     public static void changeScreenEsqueceuSenha() {
         stage.setScene(esqueceuSenha);
+    }
+
+    public static void changeScreenPesquisarUsuario() {
+        stage.setScene(pesquisarUsuario);
     }
 }
 

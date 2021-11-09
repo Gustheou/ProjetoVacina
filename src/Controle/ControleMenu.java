@@ -42,5 +42,10 @@ public class ControleMenu {
 
     }
 
+    @FXML
+    void pesquisarCadastroMenuBar(ActionEvent event) {
+        App.changeScreenPesquisarUsuario();
+    }
+
 }
 
