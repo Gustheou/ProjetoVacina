@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="249.0" prefWidth="473.0" style="-fx-background-color: #FDFAEF;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ControleLoginMensagem">
+   <children>
+      <Label layoutX="217.0" layoutY="106.0" text="Login efetuado com sucesso!">
+         <font>
+            <Font name="Times New Roman Bold" size="19.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="24.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagens/png-clipart-yuruyuri-anime-4chan-youtube-anime-television-mammal-removebg-preview.png" />
+         </image>
+      </ImageView>
+      <AnchorPane prefHeight="47.0" prefWidth="473.0" style="-fx-background-color: #A47EFC;" />
+      <AnchorPane layoutY="202.0" prefHeight="47.0" prefWidth="473.0" style="-fx-background-color: #A47EFC;" />
+      <Button layoutX="295.0" layoutY="159.0" mnemonicParsing="false" onAction="#ProsseguirButton" text="Continuar" />
+   </children>
+</AnchorPane>

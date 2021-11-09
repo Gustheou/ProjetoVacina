@@ -18,6 +18,8 @@ public class App extends Application{
     private static Scene ajudaPesquisarUsuario;
     private static Scene removerCadastro;
     private static Scene ajudaRemoverCadastro;
+    private static Scene loginMessage;
+    private static Scene ajudaListarUsuario;
 
     public static void main(String[] args) throws Exception {
         launch (args);
@@ -43,6 +45,10 @@ public class App extends Application{
         removerCadastro = new Scene (fxmlRemoverCadastro);
         Parent fxmlAjudaRemoverCadastro = FXMLLoader.load(getClass().getResource("AjudaRemoverCadastro.fxml"));
         ajudaRemoverCadastro = new Scene (fxmlAjudaRemoverCadastro);
+        Parent fxmlLoginMensagem = FXMLLoader.load(getClass().getResource("MensagemLogin.fxml"));
+        loginMessage = new Scene (fxmlLoginMensagem);
+        Parent fxmlAjudaListar = FXMLLoader.load(getClass().getResource("AjudaListarUsuarios.fxml"));
+        ajudaListarUsuario = new Scene (fxmlAjudaListar);
 
         cenario.setScene(mainScene);
         cenario.show();   
@@ -83,5 +89,14 @@ public class App extends Application{
     public static void changeScreenAjudaRemoverCadastro() {
         stage.setScene(ajudaRemoverCadastro);
     }
+
+    public static void changeScreenLoginMessage() {
+        stage.setScene(loginMessage);
+    }
+
+    public static void changeScreenAjudaListarUsuario() {
+        stage.setScene(ajudaListarUsuario);
+    }
+
 }
 

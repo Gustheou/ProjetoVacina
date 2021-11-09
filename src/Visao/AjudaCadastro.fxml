@@ -101,7 +101,7 @@
          </children>
       </GridPane>
       <Button layoutX="47.0" layoutY="351.0" mnemonicParsing="false" onAction="#voltarParaMenu" text="Voltar" />
-      <ImageView fitHeight="78.0" fitWidth="85.0" layoutX="47.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="78.0" fitWidth="85.0" layoutX="496.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Imagens/support-avatar_icon-icons.com_53645-removebg-preview.png" />
          </image>
@@ -109,6 +109,11 @@
       <ImageView fitHeight="50.0" fitWidth="48.0" layoutX="526.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@Imagens/circle_customer_help_info_information_service_support_icon_123208.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="57.0" layoutX="55.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagens/ask_question_query_demand_interrogate_icon_146778.png" />
          </image>
       </ImageView>
    </children>

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
-
+<?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ControleAjudaRemoverCadastro">
    <children>
@@ -18,7 +18,7 @@
          </image>
       </ImageView>
       <Button layoutX="388.0" layoutY="324.0" mnemonicParsing="false" onAction="#VoltarMenu" text="Voltar" />
-      <GridPane layoutX="24.0" layoutY="24.0" prefHeight="194.0" prefWidth="203.0">
+      <GridPane layoutX="24.0" layoutY="64.0" prefHeight="194.0" prefWidth="203.0">
          <columnConstraints>
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
          </columnConstraints>
@@ -34,20 +34,57 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
-            <Label text="Para remover um  usuário   você" />
-            <Label text="deve ir na aba menu e selecionar" GridPane.rowIndex="1" />
-            <Label text="a opção remover cadastro. Após" GridPane.rowIndex="2" />
-            <Label text="isso, você será  redirecionado  a" GridPane.rowIndex="3" />
-            <Label text="uma   nova   tela,  solicitando  o" GridPane.rowIndex="4" />
-            <Label text="nome, cpf e a senha. Depois  de" GridPane.rowIndex="5" />
-            <Label text="preencher      as      informações," GridPane.rowIndex="6" />
-            <Label text="marque a  confirmação e  clique" GridPane.rowIndex="7" />
-            <Label text="em remover cadastro." GridPane.rowIndex="8" />
+            <Label text="Para remover um  usuário  você">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Label>
+            <Label text="deve ir na aba menu e  escolher" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Label>
+            <Label text="a opção remover cadastro. Após" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Label>
+            <Label text="isso, você será  redirecionado  a" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Label>
+            <Label text="uma   nova   tela,   solicitando  o" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Label>
+            <Label text="nome, cpf e a senha. Depois  de" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Label>
+            <Label text="preencher      as     informações," GridPane.rowIndex="6">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Label>
+            <Label text="marque a  confirmação e  clique" GridPane.rowIndex="7">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Label>
+            <Label text="em remover cadastro." GridPane.rowIndex="8">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font></Label>
          </children>
       </GridPane>
-      <ImageView fitHeight="114.0" fitWidth="309.0" layoutX="7.0" layoutY="248.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="114.0" fitWidth="309.0" layoutX="14.0" layoutY="267.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Imagens/AjudaRemoverUsuario2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="57.0" layoutX="67.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagens/ask_question_query_demand_interrogate_icon_146778.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="56.0" fitWidth="48.0" layoutX="522.0" layoutY="313.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagens/dustbin_120823.png" />
          </image>
       </ImageView>
    </children>

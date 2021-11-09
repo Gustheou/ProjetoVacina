@@ -17,20 +17,20 @@ public abstract class Pessoa implements Vacinacao {
     private String cpf;
     private String dataNascimento;
     private String endereco;
-    private String comobirdade;
+    private String password;
 
     private Vacina v;
 
     public Pessoa(){};
 
     public Pessoa(String nome, int idade, String cpf, String dataNascimento, String endereco,
-                  String comobirdade) {
+                  String password) {
         this.nome = nome;
         this.idade = idade;
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
         this.endereco = endereco;
-        this.comobirdade = comobirdade;
+        this.password = password;
     }
 
     public String getNome() {
@@ -73,12 +73,12 @@ public abstract class Pessoa implements Vacinacao {
         this.endereco = endereco;
     }
 
-    public String getComobirdade() {
-        return comobirdade;
+    public String getPassword() {
+        return password;
     }
 
-    public void setComobirdade(String comobirdade) {
-        this.comobirdade = comobirdade;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public abstract String imprimirDados();

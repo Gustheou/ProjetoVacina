@@ -11,10 +11,10 @@ import java.util.ArrayList;
 public class ControlePessoa {
 
     public void cadastrarPessoa (String nome, int idade, String cpf, String dataNascimento, String endereco,
-                                 String comobirdade) throws IOException, ClassNotFoundException,
+                                 String password) throws IOException, ClassNotFoundException,
             FileNotFoundException {
 
-        Pessoa p = new Pessoa(nome, idade, cpf, dataNascimento, endereco, comobirdade) {
+        Pessoa p = new Pessoa(nome, idade, cpf, dataNascimento, endereco, password) {
             @Override
             public String imprimirDados() {
                 return null;

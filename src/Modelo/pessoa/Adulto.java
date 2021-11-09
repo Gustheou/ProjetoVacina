@@ -16,7 +16,7 @@ public class Adulto extends Pessoa {
                 "CPF: " + getCpf() + '\n'+
                 "Data de Nascimento: =" + getDataNascimento() + '\n'+
                 "Endereço: " + getEndereco() + '\n'+
-                "Comorbidade: " + getComobirdade() + '\n';
+                "Comorbidade: " + getPassword() + '\n';
     }
 
     @Override

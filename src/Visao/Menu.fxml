@@ -23,7 +23,7 @@
                   <items>
                     <MenuItem mnemonicParsing="false" onAction="#cadastrarUsuarioMenuBar" text="Cadastrar" />
                         <MenuItem mnemonicParsing="false" onAction="#pesquisarCadastroMenuBar" text="Pesquisar usuário" />
-                        <MenuItem mnemonicParsing="false" text="Listar cadastro" />
+                        <MenuItem mnemonicParsing="false" onAction="#ListarUsuarioMenuBar" text="Listar usuário(s)" />
                         <MenuItem mnemonicParsing="false" onAction="#removerCadastroMenuBar" text="Remover cadastro" />
                   </items>
                 </Menu>
@@ -31,7 +31,7 @@
                   <items>
                     <MenuItem mnemonicParsing="false" onAction="#ajudaCadastroMenuBar" text="Como cadastrar" />
                         <MenuItem mnemonicParsing="false" onAction="#ajudaPesquisarUsuarioMenuBar" text="Como pesquisar um usúario" />
-                        <MenuItem mnemonicParsing="false" text="Como listar todos usúarios cadastrados" />
+                        <MenuItem mnemonicParsing="false" onAction="#ajudaListarUsuariosMenuBar" text="Como listar todos usúarios cadastrados" />
                         <MenuItem mnemonicParsing="false" onAction="#ajudaRemoverCadastroMenuBar" text="Como remover um usuário" />
                   </items>
                 </Menu>

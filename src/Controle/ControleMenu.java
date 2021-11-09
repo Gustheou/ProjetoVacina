@@ -1,6 +1,12 @@
 package Controle;
 import Visao.App;
+
+import java.awt.HeadlessException;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+
+import javax.swing.JOptionPane;
+import Controle.ControlePessoa;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
@@ -32,6 +38,11 @@ public class ControleMenu {
     void ajudaRemoverCadastroMenuBar(ActionEvent event) {
         App.changeScreenAjudaRemoverCadastro();
     }
+
+    @FXML
+    void ajudaListarUsuariosMenuBar(ActionEvent event) {
+        App.changeScreenAjudaListarUsuario();
+    }
     //Clique aqui
     @FXML
     void cadastrarUsuario(MouseEvent event) throws IOException {
@@ -50,6 +61,7 @@ public class ControleMenu {
 
     @FXML
     void logarButton(ActionEvent event) {
+        App.changeScreenLoginMessage();
 
     }
 
@@ -61,6 +73,13 @@ public class ControleMenu {
     @FXML
     void removerCadastroMenuBar(ActionEvent event) {
         App.changeScreenRemoverCadastro();
+    }
+
+    ControlePessoa cP = new ControlePessoa();
+    @FXML
+    void ListarUsuarioMenuBar(ActionEvent event) throws HeadlessException, FileNotFoundException, ClassNotFoundException, IOException {
+        JOptionPane.showMessageDialog(null, cP.listarPessoa());
+        //Não sei ao certo se isso está correto. ~ Gugu
     }
 
 }
