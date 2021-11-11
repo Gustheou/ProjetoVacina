@@ -21,7 +21,13 @@ public class ControleCadastro {
     private TextField nomeTextField;
 
     @FXML
-    private TextField dataDeNascimentoTextField;
+    private TextField diaTextField;
+
+    @FXML
+    private TextField mesTextField;
+
+    @FXML
+    private TextField anoTextField;
 
     @FXML
     private TextField cpfTextField;
@@ -36,36 +42,47 @@ public class ControleCadastro {
     private TextField emailTextField;
 
     @FXML
-    private TextField IdadeTextField;
-
-    @FXML
     void concluirCadastro(ActionEvent event) throws ClassNotFoundException, FileNotFoundException, IOException {
         try {
             String nome = nomeTextField.getText();
-            String dataDeNascimento = dataDeNascimentoTextField.getText();
+            int dia = Integer.parseInt(diaTextField.getText());
+            int mes = Integer.parseInt(mesTextField.getText());
+            int ano = Integer.parseInt(anoTextField.getText());
             String cpf = cpfTextField.getText();
             String endereco = enderecoTextField.getText();
             String password = senhaTextField.getText();
             String email = emailTextField.getText();
-            int idade = Integer.parseInt(IdadeTextField.getText());
-            if (nome.equals("") || dataDeNascimento.equals("") || cpf.equals("") || endereco.equals("") || password.equals("") || email.equals("") || idade == 0) {
+            
+            int idade = 2021 - ano; //ANIVERSARIO COREANO. Procurar biblioteca
+            if (nome.equals("") || dia == 0 || mes == 0 || ano == 0 || cpf.equals("") || endereco.equals("") || password.equals("") || email.equals("") || idade == 0) {
                 JOptionPane.showMessageDialog(null, "          Error Code: 604\n\nCadastro não foi efetuado. (′⌒`)\nMotivo: Informações incompletas.");
             } else {
                 JOptionPane.showMessageDialog(null, "Cadastro efetuado com sucesso!\nLogin: "+ cpf +"\nSenha: "+ password);
                 App.changeScreenMenu(event);
                 //A partir dessa linha, será escrita no arquivo.
-                cP.cadastrarPessoa(nome, idade, cpf, dataDeNascimento, endereco, password);
-                //modifiquei nas classes o termo comorbidade pela senha.... Não sei como proceder ~ Gugu
-
+                String dataDeNascimento = (String.valueOf(dia)+" ");
+                dataDeNascimento += (String.valueOf(mes)+" ");
+                dataDeNascimento += (String.valueOf(ano));
+                cP.cadastrarPessoa(nome, cpf, dataDeNascimento, endereco);
             }
             
         } catch (NumberFormatException e) {
-            IdadeTextField.setText("Digite a sua idade:");
-            IdadeTextField.selectAll();
-            IdadeTextField.requestFocus();
+            diaTextField.setText("Dia:");
+            diaTextField.selectAll();
+            diaTextField.requestFocus();
+
+            mesTextField.setText("Mês:");
+            mesTextField.selectAll();
+            mesTextField.requestFocus();
+
+            anoTextField.setText("Ano:");
+            anoTextField.selectAll();
+            anoTextField.requestFocus();
         }
         nomeTextField.setText("");
-        dataDeNascimentoTextField.setText("");
+        diaTextField.setText("");
+        mesTextField.setText("");
+        anoTextField.setText("");
         cpfTextField.setText("");
         enderecoTextField.setText("");
         senhaTextField.setText("");

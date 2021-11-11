@@ -1,4 +1,5 @@
 package Visao;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -16,8 +17,6 @@ public class App extends Application{
     private static Scene esqueceuSenha;
     private static Scene pesquisarUsuario;
     private static Scene ajudaPesquisarUsuario;
-    private static Scene removerCadastro;
-    private static Scene ajudaRemoverCadastro;
     private static Scene loginMessage;
     private static Scene ajudaListarUsuario;
 
@@ -29,6 +28,8 @@ public class App extends Application{
     public void start(Stage cenario) throws Exception {
         stage = cenario;
         cenario.setTitle("Codando Alpacas");
+        //URL url = getClass().getResource("Menu.fxml");
+        //Parent fxmlMain = FXMLLoader.load(url);
         Parent fxmlMain = FXMLLoader.load(getClass().getResource("Menu.fxml"));
         mainScene = new Scene (fxmlMain);
         Parent fxmlCadastro = FXMLLoader.load(getClass().getResource("Cadastro.fxml"));
@@ -41,10 +42,6 @@ public class App extends Application{
         pesquisarUsuario = new Scene (fxmlPesquisarUsuario);
         Parent fxmlAjudaPesquisarUsuario = FXMLLoader.load(getClass().getResource("AjudaPesquisarUsuario.fxml"));
         ajudaPesquisarUsuario = new Scene (fxmlAjudaPesquisarUsuario);
-        Parent fxmlRemoverCadastro = FXMLLoader.load(getClass().getResource("RemoverCadastro.fxml"));
-        removerCadastro = new Scene (fxmlRemoverCadastro);
-        Parent fxmlAjudaRemoverCadastro = FXMLLoader.load(getClass().getResource("AjudaRemoverCadastro.fxml"));
-        ajudaRemoverCadastro = new Scene (fxmlAjudaRemoverCadastro);
         Parent fxmlLoginMensagem = FXMLLoader.load(getClass().getResource("MensagemLogin.fxml"));
         loginMessage = new Scene (fxmlLoginMensagem);
         Parent fxmlAjudaListar = FXMLLoader.load(getClass().getResource("AjudaListarUsuarios.fxml"));
@@ -78,16 +75,8 @@ public class App extends Application{
         stage.setScene(pesquisarUsuario);
     }
 
-    public static void changeScreenRemoverCadastro() {
-        stage.setScene(removerCadastro);
-    }
-
     public static void changeScreenAjudaPesquisarUsuario() {
         stage.setScene(ajudaPesquisarUsuario);
-    }
-
-    public static void changeScreenAjudaRemoverCadastro() {
-        stage.setScene(ajudaRemoverCadastro);
     }
 
     public static void changeScreenLoginMessage() {

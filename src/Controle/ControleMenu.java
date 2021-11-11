@@ -35,11 +35,6 @@ public class ControleMenu {
     }
 
     @FXML
-    void ajudaRemoverCadastroMenuBar(ActionEvent event) {
-        App.changeScreenAjudaRemoverCadastro();
-    }
-
-    @FXML
     void ajudaListarUsuariosMenuBar(ActionEvent event) {
         App.changeScreenAjudaListarUsuario();
     }
@@ -68,11 +63,6 @@ public class ControleMenu {
     @FXML
     void pesquisarCadastroMenuBar(ActionEvent event) {
         App.changeScreenPesquisarUsuario();
-    }
-
-    @FXML
-    void removerCadastroMenuBar(ActionEvent event) {
-        App.changeScreenRemoverCadastro();
     }
 
     ControlePessoa cP = new ControlePessoa();
