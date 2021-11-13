@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ControleCadastroVacina">
+   <children>
+      <Label layoutX="159.0" layoutY="35.0" text="Cadastro da vacina">
+         <font>
+            <Font name="Impact" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="73.0" fitWidth="59.0" layoutX="54.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagens/injection_vaccine_vaccination_needle_cure_coronavirus_icon_141460.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="73.0" fitWidth="59.0" layoutX="485.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagens/virus_covid_corona_lab_search_vaccine_icon_141687.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="150.0" layoutY="91.0" prefHeight="215.0" prefWidth="295.0">
+         <columnConstraints>
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="161.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="336.0" minWidth="10.0" prefWidth="134.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Nome da vacina:">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Validade:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Lote:" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="104.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="88.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="104.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="88.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="116.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="/" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="/" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="validadeDiaTextField" />
+                  <TextField fx:id="validadeMesTextField" GridPane.columnIndex="2" />
+                  <TextField fx:id="validadeAnoTextField" GridPane.columnIndex="4" />
+               </children>
+            </GridPane>
+            <Label text="Laboratório:" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Local de destino:" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="laboratorioTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="LoteTextField" maxWidth="-Infinity" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="LocalDeDestinoTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <SplitMenuButton fx:id="textSplitMenuButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="141.0" text="Selecione uma" GridPane.columnIndex="1">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#bcgMenuItem" text="BCG" />
+                <MenuItem mnemonicParsing="false" onAction="#covidMenuItem" text="Covid" />
+                  <MenuItem mnemonicParsing="false" onAction="#dtpMenuItem" text="DTP" />
+                  <MenuItem mnemonicParsing="false" onAction="#febreAmarelaMenuItem" text="Febre amarela" />
+                  <MenuItem mnemonicParsing="false" onAction="#influenzaMenuItem" text="Influenza" />
+                  <MenuItem mnemonicParsing="false" onAction="#meninginteMenuItem" text="Meninginte" />
+                  <MenuItem mnemonicParsing="false" onAction="#poliomeliteMenuItem" text="Poliomelite" />
+                  <MenuItem mnemonicParsing="false" onAction="#rotaVirusMenuItem" text="Rotavirus" />
+                  <MenuItem mnemonicParsing="false" onAction="#tripliceViralMenuItem" text="Triplice viral" />
+                <MenuItem mnemonicParsing="false" onAction="#variolaMenuItem" text="Varíola" />
+              </items>
+            </SplitMenuButton>
+         </children>
+      </GridPane>
+      <Button layoutX="264.0" layoutY="341.0" mnemonicParsing="false" onAction="#cadastrarVacina" text="Cadastrar" />
+      <AnchorPane layoutY="-3.0" prefHeight="35.0" prefWidth="600.0" style="-fx-background-color: #A47EFC;">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="288.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagens/building_construction_control_protection_security_-20-51_icon-icons.com_60302.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ControlePosLogin">
    <children>
       <VBox prefHeight="24.0" prefWidth="600.0" AnchorPane.bottomAnchor="376.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -22,12 +21,15 @@
                 </Menu>
                 <Menu mnemonicParsing="false" text="Vacina">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Cadastrar" />
+                    <MenuItem mnemonicParsing="false" onAction="#cadastroVacina" text="Cadastrar" />
                         <MenuItem mnemonicParsing="false" text="Pesquisar" />
                         <MenuItem mnemonicParsing="false" text="Listar" />
                   </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Sair" />
+                <Menu mnemonicParsing="false" text="Mais opções">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#sairMenuBar" text="Sair" />
+                     </items></Menu>
               </menus>
             </MenuBar>
          </children>

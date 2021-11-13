@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ControlePesquisarVacina">
+   <children>
+      <Label layoutX="166.0" layoutY="58.0" text="Pesquisar vacina">
+         <font>
+            <Font name="Impact" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="79.0" fitWidth="84.0" layoutX="480.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagens/circle_customer_help_info_information_service_support_icon_123208.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="79.0" fitWidth="92.0" layoutX="28.0" layoutY="41.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagens/46_113693.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="18.0" layoutY="180.0" text="Digite o número do lote:">
+         <font>
+            <Font name="Times New Roman" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="numeroDoLoeTextField" layoutX="182.0" layoutY="177.0" prefHeight="25.0" prefWidth="142.0" />
+      <Button layoutX="220.0" layoutY="258.0" mnemonicParsing="false" onAction="#pesquisarButton" text="Pesquisar" />
+      <GridPane fx:id="gridPane" layoutX="349.0" layoutY="122.0" prefHeight="163.0" prefWidth="231.0" visible="false">
+        <columnConstraints>
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="112.0" minWidth="10.0" prefWidth="93.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.0" minWidth="10.0" prefWidth="138.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="69.0" minHeight="2.0" prefHeight="35.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Vacina:" />
+            <Label text="Validade" GridPane.rowIndex="1" />
+            <Label text="Local de destino:" GridPane.rowIndex="2" />
+            <TextField fx:id="mostrarNomeVacinaTextField" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="73.0" GridPane.columnIndex="1" />
+            <TextField fx:id="mostrarValidadeTextField" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="73.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="mostrarLocalDestinoTextField" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="73.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Button layoutX="44.0" layoutY="258.0" mnemonicParsing="false" onAction="#voltarButton" text="Voltar" />
+      <AnchorPane layoutY="-3.0" prefHeight="35.0" prefWidth="600.0" style="-fx-background-color: #A47EFC;">
+         <children>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="286.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagens/building_construction_control_protection_security_-20-51_icon-icons.com_60302.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

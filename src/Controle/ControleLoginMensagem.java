@@ -8,7 +8,7 @@ public class ControleLoginMensagem {
 
     @FXML
     void ProsseguirButton(ActionEvent event) {
-        
+        App.changeScreenPosLogin();
     }
 
 }
