@@ -41,14 +41,34 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
          <children>
+            <SplitMenuButton fx:id="textSplitMenuButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="141.0" text="Selecione uma" GridPane.columnIndex="1">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#bcgMenuItem" text="BCG" />
+                <MenuItem mnemonicParsing="false" onAction="#covidMenuItem" text="Covid" />
+                  <MenuItem mnemonicParsing="false" onAction="#dtpMenuItem" text="DTP" />
+                  <MenuItem mnemonicParsing="false" onAction="#febreAmarelaMenuItem" text="Febre amarela" />
+                  <MenuItem mnemonicParsing="false" onAction="#influenzaMenuItem" text="Influenza" />
+                  <MenuItem mnemonicParsing="false" onAction="#meninginteMenuItem" text="Meninginte" />
+                  <MenuItem mnemonicParsing="false" onAction="#poliomeliteMenuItem" text="Poliomelite" />
+                  <MenuItem mnemonicParsing="false" onAction="#rotaVirusMenuItem" text="Rotavirus" />
+                  <MenuItem mnemonicParsing="false" onAction="#tripliceViralMenuItem" text="Triplice viral" />
+                <MenuItem mnemonicParsing="false" onAction="#variolaMenuItem" text="Varíola" />
+              </items>
+            </SplitMenuButton>
             <Label text="Nome da vacina:">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </Label>
             <Label text="Validade:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Aplicador:" GridPane.rowIndex="2">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
@@ -85,36 +105,23 @@
                   <TextField fx:id="validadeAnoTextField" GridPane.columnIndex="4" />
                </children>
             </GridPane>
-            <Label text="Laboratório:" GridPane.rowIndex="2">
-               <font>
-                  <Font name="Times New Roman Bold" size="18.0" />
-               </font>
-            </Label>
             <Label text="Local de destino:" GridPane.rowIndex="4">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </Label>
-            <TextField fx:id="laboratorioTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="aplicadorTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
             <TextField fx:id="LoteTextField" maxWidth="-Infinity" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
             <TextField fx:id="LocalDeDestinoTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <SplitMenuButton fx:id="textSplitMenuButton" mnemonicParsing="false" prefHeight="25.0" prefWidth="141.0" text="Selecione uma" GridPane.columnIndex="1">
-              <items>
-                  <MenuItem mnemonicParsing="false" onAction="#bcgMenuItem" text="BCG" />
-                <MenuItem mnemonicParsing="false" onAction="#covidMenuItem" text="Covid" />
-                  <MenuItem mnemonicParsing="false" onAction="#dtpMenuItem" text="DTP" />
-                  <MenuItem mnemonicParsing="false" onAction="#febreAmarelaMenuItem" text="Febre amarela" />
-                  <MenuItem mnemonicParsing="false" onAction="#influenzaMenuItem" text="Influenza" />
-                  <MenuItem mnemonicParsing="false" onAction="#meninginteMenuItem" text="Meninginte" />
-                  <MenuItem mnemonicParsing="false" onAction="#poliomeliteMenuItem" text="Poliomelite" />
-                  <MenuItem mnemonicParsing="false" onAction="#rotaVirusMenuItem" text="Rotavirus" />
-                  <MenuItem mnemonicParsing="false" onAction="#tripliceViralMenuItem" text="Triplice viral" />
-                <MenuItem mnemonicParsing="false" onAction="#variolaMenuItem" text="Varíola" />
-              </items>
-            </SplitMenuButton>
+            <Label fx:id="laboratorioLabel" text="Laboratório:" visible="false" GridPane.rowIndex="5">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="laboratorioTextField" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
-      <Button layoutX="264.0" layoutY="341.0" mnemonicParsing="false" onAction="#cadastrarVacina" text="Cadastrar" />
+      <Button layoutX="375.0" layoutY="342.0" mnemonicParsing="false" onAction="#cadastrarVacinaButton" text="Cadastrar" />
       <AnchorPane layoutY="-3.0" prefHeight="35.0" prefWidth="600.0" style="-fx-background-color: #A47EFC;">
          <children>
             <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="288.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
@@ -124,5 +131,6 @@
             </ImageView>
          </children>
       </AnchorPane>
+      <Button layoutX="150.0" layoutY="342.0" mnemonicParsing="false" onAction="#voltarMenuPosLoginButton" text="Voltar" />
    </children>
 </AnchorPane>

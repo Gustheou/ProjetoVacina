@@ -2,8 +2,8 @@ package Modelo.vacina;
 
 public class VacinaBCG extends Vacina {
 
-    public VacinaBCG(String nome, String dataVacinacao, String lote, String vacinador, String localVacinacao) {
-        super(nome, dataVacinacao, lote, vacinador, localVacinacao);
+    public VacinaBCG(String nome, String dataVacinacao, String lote, String vacinador, String localVacinacao, String laboratorio) {
+        super(nome, dataVacinacao, lote, vacinador, localVacinacao, laboratorio);
     }
 
     @Override
@@ -13,7 +13,7 @@ public class VacinaBCG extends Vacina {
                 "Data de Vacinacao: " + getDataVacinacao() + '\n' +
                 "Lote: " + getLote() + '\n' +
                 "Vacinador: " + getVacinador() + '\n' +
-                "Local de Vacinacao: " + getVacinador() + '\n';
+                "Local de Vacinacao: " + getLocalVacinacao() + '\n';
     }
 }
 

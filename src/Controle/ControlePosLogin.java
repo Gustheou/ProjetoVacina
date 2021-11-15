@@ -16,4 +16,9 @@ public class ControlePosLogin {
         App.changeScreenCadastroVacina();
     }
 
+    @FXML
+    void pesquisarVacinaMenuItem(ActionEvent event) {
+        App.changeScreenPesquisarVacina();
+    }
+
 }

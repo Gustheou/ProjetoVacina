@@ -8,10 +8,10 @@ import java.util.ArrayList;
 
 public class ControleVacina {
 
-    public void cadastrarVacina (String nome, String dataVacinacao, String lote, String vacinador, String localVacinacao) throws IOException, ClassNotFoundException,
+    public void cadastrarVacina (String nome, String dataVacinacao, String lote, String vacinador, String localVacinacao, String laboratorio) throws IOException, ClassNotFoundException,
             FileNotFoundException {
 
-        Vacina v = new Vacina(nome, dataVacinacao, lote, vacinador, localVacinacao) {
+        Vacina v = new Vacina(nome, dataVacinacao, lote, vacinador, localVacinacao, laboratorio) {
             @Override
             public String tostring() {
                 return null;
@@ -20,8 +20,8 @@ public class ControleVacina {
         v.cadastrarVacina(v);
     }
 
-    public void removerVacina (String nome, String dataVacinacao, String lote, String vacinador, String localVacinacao) throws IOException, ClassNotFoundException, FileNotFoundException {
-        Vacina v = new Vacina(nome, dataVacinacao, lote, vacinador, localVacinacao) {
+    public void removerVacina (String nome, String dataVacinacao, String lote, String vacinador, String localVacinacao, String laboratorio) throws IOException, ClassNotFoundException, FileNotFoundException {
+        Vacina v = new Vacina(nome, dataVacinacao, lote, vacinador, localVacinacao, laboratorio) {
             @Override
             public String tostring() {
                 return null;

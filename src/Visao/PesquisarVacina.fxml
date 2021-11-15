@@ -47,7 +47,7 @@
         </rowConstraints>
          <children>
             <Label text="Vacina:" />
-            <Label text="Validade" GridPane.rowIndex="1" />
+            <Label text="Validade:" GridPane.rowIndex="1" />
             <Label text="Local de destino:" GridPane.rowIndex="2" />
             <TextField fx:id="mostrarNomeVacinaTextField" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="73.0" GridPane.columnIndex="1" />
             <TextField fx:id="mostrarValidadeTextField" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="73.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />

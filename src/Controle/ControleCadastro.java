@@ -57,7 +57,7 @@ public class ControleCadastro {
             if (nome.equals("") || dia == 0 || mes == 0 || ano == 0 || cpf.equals("") || endereco.equals("") || password.equals("") || email.equals("") || idade == 0) {
                 JOptionPane.showMessageDialog(null, "          Error Code: 604\n\nCadastro não foi efetuado. (′⌒`)\nMotivo: Informações incompletas.");
             } else {
-                JOptionPane.showMessageDialog(null, "Cadastro efetuado com sucesso!\nLogin: "+ cpf +"\nSenha: "+ password);
+                JOptionPane.showMessageDialog(null, "Cadastro do aplicador efetuado com sucesso!\nLogin: "+ cpf +"\nSenha: "+ password);
                 App.changeScreenMenu(event);
                 //A partir dessa linha, será escrita no arquivo.
                 String dataDeNascimento = (String.valueOf(dia)+" ");

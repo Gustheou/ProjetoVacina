@@ -22,7 +22,7 @@
                 <Menu mnemonicParsing="false" text="Vacina">
                   <items>
                     <MenuItem mnemonicParsing="false" onAction="#cadastroVacina" text="Cadastrar" />
-                        <MenuItem mnemonicParsing="false" text="Pesquisar" />
+                        <MenuItem mnemonicParsing="false" onAction="#pesquisarVacinaMenuItem" text="Pesquisar" />
                         <MenuItem mnemonicParsing="false" text="Listar" />
                   </items>
                 </Menu>

@@ -13,17 +13,24 @@ public abstract class Vacina {
     private String lote;
     private String vacinador;
     private String localVacinacao;
+    private String laboratorio;
 
     public Vacina() {}
 
     public Vacina(String nome, String dataVacinacao, String lote,
-                  String vacinador, String localVacinacao) {
+                  String vacinador, String localVacinacao, String laboratorio) {
         this.nome = nome;
-
         this.dataVacinacao = dataVacinacao;
         this.lote = lote;
         this.vacinador = vacinador;
         this.localVacinacao = localVacinacao;
+        this.laboratorio = laboratorio;
+    }
+    public void setLaboratorio (String laboratorio) {
+        this.laboratorio = laboratorio;
+    }
+    public String getLaboratorio () {
+        return laboratorio;
     }
 
     public String getNome() {

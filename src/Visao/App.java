@@ -21,6 +21,7 @@ public class App extends Application{
     private static Scene ajudaListarUsuario;
     private static Scene posLogin;
     private static Scene cadastroVacina;
+    private static Scene pesquisarVacina;
 
     public static void main(String[] args) throws Exception {
         launch (args);
@@ -29,9 +30,7 @@ public class App extends Application{
     @Override
     public void start(Stage cenario) throws Exception {
         stage = cenario;
-        cenario.setTitle("Codando Alpacas");
-        //URL url = getClass().getResource("Menu.fxml");
-        //Parent fxmlMain = FXMLLoader.load(url);
+        cenario.setTitle("Imuni App");
         Parent fxmlMain = FXMLLoader.load(getClass().getResource("Menu.fxml"));
         mainScene = new Scene (fxmlMain);
         Parent fxmlCadastro = FXMLLoader.load(getClass().getResource("Cadastro.fxml"));
@@ -52,6 +51,8 @@ public class App extends Application{
         posLogin = new Scene (fxmlPosLogin);
         Parent fxmlCadastroVacina = FXMLLoader.load(getClass().getResource("CadastroVacina.fxml"));
         cadastroVacina = new Scene (fxmlCadastroVacina);
+        Parent fxmlPesquisarVacina = FXMLLoader.load(getClass().getResource("PesquisarVacina.fxml"));
+        pesquisarVacina = new Scene (fxmlPesquisarVacina);
 
         cenario.setScene(mainScene);
         cenario.show();   
@@ -99,6 +100,10 @@ public class App extends Application{
 
     public static void changeScreenCadastroVacina() {
         stage.setScene(cadastroVacina);
+    }
+
+    public static void changeScreenPesquisarVacina() {
+        stage.setScene(pesquisarVacina);
     }
 
 }

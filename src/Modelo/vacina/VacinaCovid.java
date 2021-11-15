@@ -8,8 +8,8 @@ public class VacinaCovid extends Vacina{
     public VacinaCovid() {}
 
     public VacinaCovid(String nome, String dataVacinacao, String lote, String vacinador, String localVacinacao,
-                       String laboratorio, String validadeLote) {
-        super(nome, dataVacinacao, lote, vacinador, localVacinacao);
+                        String validadeLote, String laboratorio) {
+        super(nome, dataVacinacao, lote, vacinador, localVacinacao, laboratorio);
         this.laboratorio = laboratorio;
         this.validadeLote = validadeLote;
     }
@@ -39,7 +39,7 @@ public class VacinaCovid extends Vacina{
                 "Lote: " + getLote() + '\n' +
                 "Validade do lote: " + getValidadeLote() + '\n' +
                 "Vacinador: " + getVacinador() + '\n' +
-                "Local de Vacinacao: " + getVacinador() + '\n';
+                "Local de Vacinacao: " + getLocalVacinacao() + '\n';
     }
 
 }
