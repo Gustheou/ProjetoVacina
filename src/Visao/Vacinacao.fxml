@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ControleVacinacao">
+   <children>
+      <AnchorPane prefHeight="47.0" prefWidth="600.0" style="-fx-background-color: #A47EFC;">
+         <children>
+            <ImageView fitHeight="47.0" fitWidth="37.0" layoutX="282.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagens/building_construction_control_protection_security_-20-51_icon-icons.com_60302.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="353.0" prefHeight="47.0" prefWidth="600.0" style="-fx-background-color: #A47EFC;">
+         <children>
+            <ImageView fitHeight="37.0" fitWidth="79.0" layoutX="264.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagens/WhatsApp_Image_2021-11-13_at_6.00.23_PM-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="96.0" layoutY="11.0" mnemonicParsing="false" onAction="#voltarButton" style="-fx-background-radius: 20;" text="Voltar" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="26.0" layoutY="60.0" text="Vacinação">
+         <font>
+            <Font name="Impact" size="36.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="64.0" fitWidth="53.0" layoutX="533.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagens/injection_vaccine_vaccination_person_avatar_coronavirus_icon_141461.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="14.0" layoutY="133.0" text="Digite o cpf:">
+         <font>
+            <Font name="Times New Roman" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cpfTextField" layoutX="97.0" layoutY="130.0" prefHeight="25.0" prefWidth="142.0" />
+      <Label fx:id="mensagemHelpLabel" layoutX="278.0" layoutY="134.0" text="Digite o número do lote da vacina que almeja vacinar:" visible="false">
+         <font>
+            <Font name="Times New Roman Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="loteLabel" layoutX="292.0" layoutY="182.0" text="Lote:" visible="false">
+         <font>
+            <Font name="Times New Roman" size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="loteTextField" layoutX="337.0" layoutY="179.0" visible="false" />
+      <Button fx:id="continuarButtonSumir" layoutX="142.0" layoutY="200.0" mnemonicParsing="false" onAction="#continuarButton" text="Continuar" />
+      <TextArea fx:id="textAreaDados" editable="false" layoutX="22.0" layoutY="168.0" prefHeight="158.0" prefWidth="200.0" visible="false" />
+      <TextArea fx:id="textAreaLote" layoutX="337.0" layoutY="213.0" prefHeight="85.0" prefWidth="149.0" visible="false" />
+      <Button fx:id="vacinarButtonAparecer" layoutX="384.0" layoutY="314.0" mnemonicParsing="false" onAction="#vacinarButton" text="Vacinar" visible="false" />
+      <Button fx:id="continuar2ButtonAparecer" layoutX="499.0" layoutY="179.0" mnemonicParsing="false" onAction="#continuar2Button" text="Continuar" visible="false" />
+   </children>
+</AnchorPane>

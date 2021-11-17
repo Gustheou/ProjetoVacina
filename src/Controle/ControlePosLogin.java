@@ -103,7 +103,7 @@ public class ControlePosLogin {
 
     @FXML
     void imagemNovaVacinaPaciente(MouseEvent event) {
-
+        App.changeScreenVacinacao();
     }
 
     @FXML
@@ -136,7 +136,7 @@ public class ControlePosLogin {
 
     @FXML
     void novaVacinaButton(MouseEvent event) {
-
+        App.changeScreenVacinacao();
     }
 
     @FXML

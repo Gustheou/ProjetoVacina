@@ -1,5 +1,7 @@
 package Controle;
 
+import javax.swing.JOptionPane;
+
 import Modelo.pessoa.Paciente;
 import Visao.App;
 import javafx.event.ActionEvent;

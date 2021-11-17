@@ -3,6 +3,8 @@ package Controle;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
+import javax.swing.JOptionPane;
+
 import Visao.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -88,6 +90,8 @@ public class ControleCadastroVacina {
             String laboratorio = String.valueOf(laboratorioTextField.getText());
            
             cV.cadastrarVacina(vacinaTipo, dataVacinacao, lote, aplicador, localVacinacao, laboratorio, dataDeValidade);
+            JOptionPane.showMessageDialog(null, "Vacina cadastrada com sucesso!\nLote: "+ lote);
+            App.changeScreenMenu(event);
             //É para cadastrar a vacina, ou o usuário vacinando?
         } catch (NumberFormatException e) {
             validadeDiaTextField.setText("dia");
