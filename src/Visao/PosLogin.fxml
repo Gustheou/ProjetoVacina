@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="402.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ControlePosLogin">
    <children>
       <ImageView fitHeight="413.0" fitWidth="611.0" layoutX="-6.0" layoutY="-9.0" pickOnBounds="true">
@@ -33,45 +32,85 @@
             <Image url="@../Imagens/building_construction_control_protection_security_-20-51_icon-icons.com_60302.png" />
          </image>
       </ImageView>
-      <Label fx:id="cadastrarPacienteLabel" layoutX="233.0" layoutY="134.0" onMouseClicked="#cadastrarPaciente" text="Cadastrar" visible="false">
+      <Label fx:id="cadastrarPacienteLabel" layoutX="209.0" layoutY="167.0" onMouseClicked="#cadastrarPaciente" text="Cadastrar" visible="false">
          <font>
-            <Font name="Impact" size="23.0" />
+            <Font name="Times New Roman" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="pesquisarPacienteLabel" layoutX="364.0" layoutY="135.0" onMouseClicked="#pesquisarPaciente" text="Pesquisar" visible="false">
+      <Label fx:id="pesquisarPacienteLabel" layoutX="323.0" layoutY="168.0" onMouseClicked="#pesquisarPaciente" text="Pesquisar" visible="false">
          <font>
-            <Font name="Impact" size="23.0" />
+            <Font name="Times New Roman" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="listarPacienteLabel" layoutX="513.0" layoutY="135.0" onMouseClicked="#listarPaciente" text="Listar" visible="false">
+      <Label fx:id="listarPacienteLabel" layoutX="427.0" layoutY="168.0" onMouseClicked="#listarPaciente" text="Listar" visible="false">
          <font>
-            <Font name="Impact" size="23.0" />
+            <Font name="Times New Roman" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="cadastrarVacinaLabel" layoutX="233.0" layoutY="233.0" onMouseClicked="#cadastrarVacina" text="Cadastrar" visible="false">
+      <Label fx:id="cadastrarVacinaLabel" layoutX="221.0" layoutY="265.0" onMouseClicked="#cadastrarVacina" text="Cadastrar" visible="false">
          <font>
-            <Font name="Impact" size="23.0" />
+            <Font name="Times New Roman" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="pesquisarVacinaLabel" layoutX="364.0" layoutY="235.0" onMouseClicked="#pesquisarVacina" text="Pesquisar" visible="false">
+      <Label fx:id="pesquisarVacinaLabel" layoutX="352.0" layoutY="267.0" onMouseClicked="#pesquisarVacina" text="Pesquisar" visible="false">
          <font>
-            <Font name="Impact" size="23.0" />
+            <Font name="Times New Roman" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="listarVacinaLabel" layoutX="513.0" layoutY="235.0" onMouseClicked="#listarVacina" text="Listar" visible="false">
+      <Label fx:id="listarVacinaLabel" layoutX="501.0" layoutY="267.0" onMouseClicked="#listarVacina" text="Listar" visible="false">
          <font>
-            <Font name="Impact" size="23.0" />
+            <Font name="Times New Roman" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="pacienteHelpLabel" layoutX="308.0" layoutY="189.0" text="*Selecione uma das opções acima." visible="false">
-         <font>
-            <Font name="Times New Roman Italic" size="12.0" />
-         </font>
-      </Label>
-      <Label fx:id="vacinaHelpLabel" layoutX="315.0" layoutY="283.0" text="*Selecione uma das opções acima." visible="false">
+      <Label fx:id="pacienteHelpLabel" layoutX="308.0" layoutY="199.0" text="*Selecione uma das opções acima." visible="false">
          <font>
             <Font name="Times New Roman Italic" size="12.0" />
          </font>
       </Label>
+      <Label fx:id="vacinaHelpLabel" layoutX="300.0" layoutY="299.0" text="*Selecione uma das opções acima." visible="false">
+         <font>
+            <Font name="Times New Roman Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="novaVacinaLabel" layoutX="504.0" layoutY="168.0" onMouseClicked="#novaVacinaButton" text="Nova vacina" visible="false">
+         <font>
+            <Font name="Times New Roman" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imagemCadastroPaciente" fitHeight="47.0" fitWidth="47.0" layoutX="213.0" layoutY="121.0" onMouseClicked="#imagemCadastrarPaciente" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Imagens/17_113699.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imagemPesquisarPaciente" fitHeight="39.0" fitWidth="47.0" layoutX="330.0" layoutY="125.0" onMouseClicked="#imagemPesquisarPaciente" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Imagens/search_locate_find_icon-icons.com_67287.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imagemListarPaciente" fitHeight="47.0" fitWidth="47.0" layoutX="421.0" layoutY="122.0" onMouseClicked="#imagemListarPaciente" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Imagens/1485476036-artboard-1_78544.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imagemNovaVacinaPaciente" fitHeight="47.0" fitWidth="47.0" layoutX="515.0" layoutY="121.0" onMouseClicked="#imagemNovaVacinaPaciente" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Imagens/injection_vaccine_vaccination_person_avatar_coronavirus_icon_141461.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imagemCadastroVacina" fitHeight="47.0" fitWidth="47.0" layoutX="224.0" layoutY="214.0" onMouseClicked="#imagemCadastrarVacina" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Imagens/virus_antivirus_injection_syringe_vaccine_medicine_icon_142210.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imagemPesquisarVacina" fitHeight="39.0" fitWidth="47.0" layoutX="359.0" layoutY="223.0" onMouseClicked="#imagemPesquisarVacina" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Imagens/search_locate_find_icon-icons.com_67287.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imagemListarVacina" fitHeight="47.0" fitWidth="47.0" layoutX="494.0" layoutY="220.0" onMouseClicked="#imagemListarVacina" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../Imagens/1485476036-artboard-1_78544.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

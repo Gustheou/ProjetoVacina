@@ -8,26 +8,11 @@ import java.util.ArrayList;
 
 public class ControleVacina {
 
-    public void cadastrarVacina (String nome, String dataVacinacao, String lote, String vacinador, String localVacinacao, String laboratorio) throws IOException, ClassNotFoundException,
-            FileNotFoundException {
+    public void cadastrarVacina (String nome, String dataVacinacao, String lote, String aplicador, String localVacinacao, 
+            String laboratorio, String validadeLote ) throws IOException, ClassNotFoundException,FileNotFoundException {
 
-        Vacina v = new Vacina(nome, dataVacinacao, lote, vacinador, localVacinacao, laboratorio) {
-            @Override
-            public String tostring() {
-                return null;
-            }
-        };
+        Vacina v = new Vacina(nome, dataVacinacao, lote, aplicador, localVacinacao, laboratorio, validadeLote);
         v.cadastrarVacina(v);
-    }
-
-    public void removerVacina (String nome, String dataVacinacao, String lote, String vacinador, String localVacinacao, String laboratorio) throws IOException, ClassNotFoundException, FileNotFoundException {
-        Vacina v = new Vacina(nome, dataVacinacao, lote, vacinador, localVacinacao, laboratorio) {
-            @Override
-            public String tostring() {
-                return null;
-            }
-        };
-        v.removerVacina(v);
     }
 
     public ArrayList<Vacina> listarVacina () throws IOException, FileNotFoundException, ClassNotFoundException {

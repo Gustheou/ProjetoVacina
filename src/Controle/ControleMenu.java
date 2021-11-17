@@ -54,9 +54,21 @@ public class ControleMenu {
         App.changeScreenEsqueceuSenha();
     }
 
+    ControlePessoa cA = new ControlePessoa();
     @FXML
-    void logarButton(ActionEvent event) {
-        App.changeScreenLoginMessage();
+    void logarButton(ActionEvent event) throws ClassNotFoundException, FileNotFoundException, IOException {
+        String login = String.valueOf(loginTextField.getText());
+        String senha = String.valueOf(senhaTextField.getText());
+        boolean loginMenu = cA.pesquisarLoginMenu(login);
+        boolean senhaMenu = cA.pesquisarSenhaMenu(senha);
+
+        if (loginMenu == true && senhaMenu == true) {
+            App.changeScreenLoginMessage();
+        } else {
+            JOptionPane.showMessageDialog(null,"Login ou senha incorretos, tente novamente!");
+        }
+        loginTextField.setText("");
+        senhaTextField.setText("");
 
     }
 
@@ -68,7 +80,7 @@ public class ControleMenu {
     ControlePessoa cP = new ControlePessoa();
     @FXML
     void ListarUsuarioMenuBar(ActionEvent event) throws HeadlessException, FileNotFoundException, ClassNotFoundException, IOException {
-        JOptionPane.showMessageDialog(null, cP.listarPessoa());
+        JOptionPane.showMessageDialog(null, cP.imprimirAplicador());
         //Não sei ao certo se isso está correto. ~ Gugu
     }
 

@@ -4,6 +4,7 @@ import Visao.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 
 public class ControlePosLogin {
@@ -33,8 +34,32 @@ public class ControlePosLogin {
     private Label vacinaHelpLabel;
 
     @FXML
-    void cadastrarPaciente(MouseEvent event) {
+    private Label novaVacinaLabel;
 
+    @FXML
+    private ImageView imagemCadastroPaciente;
+
+    @FXML
+    private ImageView imagemPesquisarPaciente;
+
+    @FXML
+    private ImageView imagemListarPaciente;
+
+    @FXML
+    private ImageView imagemNovaVacinaPaciente;
+
+    @FXML
+    private ImageView imagemCadastroVacina;
+
+    @FXML
+    private ImageView imagemPesquisarVacina;
+
+    @FXML
+    private ImageView imagemListarVacina;
+
+    @FXML
+    void cadastrarPaciente(MouseEvent event) {
+        App.changeScreenCadastrarPaciete();
     }
 
     @FXML
@@ -43,8 +68,42 @@ public class ControlePosLogin {
     }
 
     @FXML
+    void imagemCadastrarPaciente(MouseEvent event) {
+        App.changeScreenCadastrarPaciete();
+    }
+
+    @FXML
+    void imagemCadastrarVacina(MouseEvent event) {
+        App.changeScreenCadastroVacina();
+    }
+
+    @FXML
+    void imagemListarPaciente(MouseEvent event) {
+
+    }
+
+    @FXML
+    void imagemListarVacina(MouseEvent event) {
+
+    }
+
+    @FXML
+    void imagemNovaVacinaPaciente(MouseEvent event) {
+
+    }
+
+    @FXML
+    void imagemPesquisarPaciente(MouseEvent event) {
+    }
+
+    @FXML
+    void imagemPesquisarVacina(MouseEvent event) {
+        App.changeScreenPesquisarVacina();
+    }
+
+    @FXML
     void listarPaciente(MouseEvent event) {
-        
+
     }
 
     @FXML
@@ -53,7 +112,16 @@ public class ControlePosLogin {
     }
 
     @FXML
+    void novaVacinaButton(MouseEvent event) {
+
+    }
+
+    @FXML
     void pacienteButton(ActionEvent event) {
+
+        imagemCadastroVacina.setVisible(false);
+        imagemPesquisarVacina.setVisible(false);
+        imagemListarVacina.setVisible(false);
         cadastrarVacinaLabel.setVisible(false);
         pesquisarVacinaLabel.setVisible(false);
         listarVacinaLabel.setVisible(false);
@@ -63,11 +131,16 @@ public class ControlePosLogin {
         pesquisarPacienteLabel.setVisible(true);
         listarPacienteLabel.setVisible(true);
         pacienteHelpLabel.setVisible(true);
+        novaVacinaLabel.setVisible(true);
+        imagemNovaVacinaPaciente.setVisible(true);
+        imagemCadastroPaciente.setVisible(true);
+        imagemListarPaciente.setVisible(true);
+        imagemPesquisarPaciente.setVisible(true);
     }
 
     @FXML
     void pesquisarPaciente(MouseEvent event) {
-
+        
     }
 
     @FXML
@@ -86,11 +159,20 @@ public class ControlePosLogin {
         pesquisarPacienteLabel.setVisible(false);
         listarPacienteLabel.setVisible(false);
         pacienteHelpLabel.setVisible(false);
+        imagemCadastroPaciente.setVisible(false);
+        imagemListarPaciente.setVisible(false);
+        imagemPesquisarPaciente.setVisible(false);
+        novaVacinaLabel.setVisible(false);
+        imagemNovaVacinaPaciente.setVisible(false);
 
         cadastrarVacinaLabel.setVisible(true);
         pesquisarVacinaLabel.setVisible(true);
         listarVacinaLabel.setVisible(true);
         vacinaHelpLabel.setVisible(true);
+        imagemCadastroVacina.setVisible(true);
+        imagemPesquisarVacina.setVisible(true);
+        imagemListarVacina.setVisible(true);
+
     }
 
 }

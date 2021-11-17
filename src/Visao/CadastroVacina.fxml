@@ -63,22 +63,30 @@
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </Label>
-            <Label text="Validade:" GridPane.rowIndex="1">
+            <Label text="Aplicador:" GridPane.rowIndex="1">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </Label>
-            <Label text="Aplicador:" GridPane.rowIndex="2">
+            <Label text="Lote:" GridPane.rowIndex="2">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </Label>
-            <Label text="Lote:" GridPane.rowIndex="3">
+            <Label text="Local de destino:" GridPane.rowIndex="3">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>
             </Label>
-            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Label fx:id="validadeLabel" text="Validade:" visible="false" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="aplicadorTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="LoteTextField" maxWidth="-Infinity" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="LocalDeDestinoTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <GridPane fx:id="gridPaneValidadeCovid" visible="false" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <columnConstraints>
                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="104.0" />
                   <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="88.0" />
@@ -105,14 +113,6 @@
                   <TextField fx:id="validadeAnoTextField" GridPane.columnIndex="4" />
                </children>
             </GridPane>
-            <Label text="Local de destino:" GridPane.rowIndex="4">
-               <font>
-                  <Font name="Times New Roman Bold" size="18.0" />
-               </font>
-            </Label>
-            <TextField fx:id="aplicadorTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField fx:id="LoteTextField" maxWidth="-Infinity" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField fx:id="LocalDeDestinoTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
             <Label fx:id="laboratorioLabel" text="Laboratório:" visible="false" GridPane.rowIndex="5">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />

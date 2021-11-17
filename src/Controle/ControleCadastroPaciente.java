@@ -1,19 +1,15 @@
 package Controle;
-import Visao.App;
-
-import java.io.FileNotFoundException;
-import java.io.IOException;
 
 import javax.swing.JOptionPane;
+
+import Visao.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import Controle.ControlePessoa;
 
-public class ControleCadastro {
+public class ControleCadastroPaciente {
 
-    ControlePessoa cP = new ControlePessoa();
     @FXML
     private AnchorPane AncherPane;
 
@@ -30,19 +26,16 @@ public class ControleCadastro {
     private TextField anoTextField;
 
     @FXML
-    private TextField cpfTextField;
-
-    @FXML
     private TextField enderecoTextField;
 
     @FXML
-    private TextField senhaTextField;
+    private TextField cpfTextField;
 
     @FXML
     private TextField emailTextField;
 
     @FXML
-    void concluirCadastro(ActionEvent event) throws ClassNotFoundException, FileNotFoundException, IOException {
+    void concluirCadastro(ActionEvent event) {
         try {
             String nome = nomeTextField.getText();
             int dia = Integer.parseInt(diaTextField.getText());
@@ -50,20 +43,19 @@ public class ControleCadastro {
             int ano = Integer.parseInt(anoTextField.getText());
             String cpf = cpfTextField.getText();
             String endereco = enderecoTextField.getText();
-            String password = senhaTextField.getText();
             String email = emailTextField.getText();
             
             int idade = 2021 - ano; //ANIVERSARIO COREANO. Procurar biblioteca
-            if (nome.equals("") || dia == 0 || mes == 0 || ano == 0 || cpf.equals("") || endereco.equals("") || password.equals("") || email.equals("") || idade == 0) {
+            if (nome.equals("") || dia == 0 || mes == 0 || ano == 0 || cpf.equals("") || endereco.equals("") || email.equals("") || idade == 0) {
                 JOptionPane.showMessageDialog(null, "          Error Code: 604\n\nCadastro não foi efetuado. (′⌒`)\nMotivo: Informações incompletas.");
             } else {
-                JOptionPane.showMessageDialog(null, "Cadastro do aplicador efetuado com sucesso!\nLogin: "+ cpf +"\nSenha: "+ password);
-                App.changeScreenMenu(event);
+                JOptionPane.showMessageDialog(null, "Cadastro do paciente efetuado com sucesso!");
+                App.changeScreenPosLogin();
                 //A partir dessa linha, será escrita no arquivo.
-                String dataDeNascimento = (String.valueOf(dia)+" ");
-                dataDeNascimento += (String.valueOf(mes)+" ");
+                String dataDeNascimento = (String.valueOf(dia)+" / ");
+                dataDeNascimento += (String.valueOf(mes)+" / ");
                 dataDeNascimento += (String.valueOf(ano));
-                cP.cadastrarPessoa(nome, cpf, dataDeNascimento, endereco);
+                //cP.cadastrarPessoa(nome, cpf, dataDeNascimento, endereco);
             }
             
         } catch (NumberFormatException e) {
@@ -85,15 +77,13 @@ public class ControleCadastro {
         anoTextField.setText("");
         cpfTextField.setText("");
         enderecoTextField.setText("");
-        senhaTextField.setText("");
         emailTextField.setText("");
-        
         
     }
 
     @FXML
     void voltarParaMenu(ActionEvent event) {
-        App.changeScreenMenu(event);
+        App.changeScreenPosLogin();
     }
 
 }

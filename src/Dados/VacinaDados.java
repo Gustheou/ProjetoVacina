@@ -29,24 +29,5 @@ public class VacinaDados {
         return vacinas;
     }
 
-    public void removerVacina (Vacina v) throws FileNotFoundException, IOException, ClassNotFoundException {
-        ArrayList<Vacina> vacinas;
-        vacinas = listarVacinas();
 
-        for (int i = 0; i < vacinas.size(); i++) {
-            if (v.getNome().equals(vacinas.get(i).getNome()))  {
-                vacinas.remove(i);
-                break;
-            }
-        }
-
-        File arq = new File("listaVacinas.ser");
-        FileOutputStream arquivos = new FileOutputStream(arq);
-
-        FileOutputStream fluxo = new FileOutputStream(arq);
-        try (ObjectOutputStream gravarObj = new ObjectOutputStream(fluxo)) {
-            gravarObj.writeObject(vacinas);
-        }
-
-    }
 }

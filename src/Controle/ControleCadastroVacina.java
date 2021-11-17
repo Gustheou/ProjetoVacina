@@ -9,6 +9,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
 
 public class ControleCadastroVacina {
 
@@ -39,6 +40,12 @@ public class ControleCadastroVacina {
     @FXML
     private Label laboratorioLabel;
 
+    @FXML
+    private Label validadeLabel;
+    
+    @FXML
+    private GridPane gridPaneValidadeCovid;
+
     private String vacinaTipo;
 
     ControleVacina cV = new ControleVacina();
@@ -57,6 +64,8 @@ public class ControleCadastroVacina {
         setVacina("BCG");
         laboratorioLabel.setVisible(false);
         laboratorioTextField.setVisible(false);
+        validadeLabel.setVisible(false);
+        gridPaneValidadeCovid.setVisible(false);
     }
 
     @FXML
@@ -69,11 +78,23 @@ public class ControleCadastroVacina {
             String dataDeValidade = String.valueOf(dia);
             dataDeValidade += " / "+ String.valueOf(mes);
             dataDeValidade += " / "+ String.valueOf(ano);
-            String laboratorio = laboratorioTextField.getText();
+
+            String dataVacinacao = "";
+            //String dataVacinacao = DataVacinacaoTextField.getText();
+            
             String lote = LoteTextField.getText();
-            String localdeDestino = LocalDeDestinoTextField.getText();
             String aplicador = aplicadorTextField.getText();
-            cV.cadastrarVacina(vacinaTipo, dataDeValidade, lote, aplicador, localdeDestino, laboratorio);
+
+            String localVacinacao = "";
+            //String localVacinacao = LocalDeVacinacaoTextField.getText();
+
+            String laboratorio = "";
+            //String laboratorio = LaboratorioTextField.getText();
+
+            String validadeLote = "";
+            //String validadeLote = ValidadeLoteTextField.getText();
+           
+            cV.cadastrarVacina(vacinaTipo, dataVacinacao, lote, aplicador, localVacinacao, laboratorio, validadeLote);
             //É para cadastrar a vacina, ou o usuário vacinando?
         } catch (NumberFormatException e) {
             validadeDiaTextField.setText("dia");
@@ -116,6 +137,8 @@ public class ControleCadastroVacina {
         setVacina("Covid");
         laboratorioLabel.setVisible(true);
         laboratorioTextField.setVisible(true);
+        validadeLabel.setVisible(true);
+        gridPaneValidadeCovid.setVisible(true);
     }
 
     @FXML
@@ -124,6 +147,8 @@ public class ControleCadastroVacina {
         setVacina("DTP");
         laboratorioLabel.setVisible(false);
         laboratorioTextField.setVisible(false);
+        validadeLabel.setVisible(false);
+        gridPaneValidadeCovid.setVisible(false);
     }
 
     @FXML
@@ -132,6 +157,8 @@ public class ControleCadastroVacina {
         setVacina("Febre amarela");
         laboratorioLabel.setVisible(false);
         laboratorioTextField.setVisible(false);
+        validadeLabel.setVisible(false);
+        gridPaneValidadeCovid.setVisible(false);
     }
 
     @FXML
@@ -140,6 +167,8 @@ public class ControleCadastroVacina {
         setVacina("Influenza");
         laboratorioLabel.setVisible(false);
         laboratorioTextField.setVisible(false);
+        validadeLabel.setVisible(false);
+        gridPaneValidadeCovid.setVisible(false);
     }
 
     @FXML
@@ -148,6 +177,8 @@ public class ControleCadastroVacina {
         setVacina("Meninginte");
         laboratorioLabel.setVisible(false);
         laboratorioTextField.setVisible(false);
+        validadeLabel.setVisible(false);
+        gridPaneValidadeCovid.setVisible(false);
     }
 
     @FXML
@@ -156,6 +187,8 @@ public class ControleCadastroVacina {
         setVacina("Poliomelite");
         laboratorioLabel.setVisible(false);
         laboratorioTextField.setVisible(false);
+        validadeLabel.setVisible(false);
+        gridPaneValidadeCovid.setVisible(false);
     }
 
     @FXML
@@ -164,6 +197,8 @@ public class ControleCadastroVacina {
         setVacina("Rota virus");
         laboratorioLabel.setVisible(false);
         laboratorioTextField.setVisible(false);
+        validadeLabel.setVisible(false);
+        gridPaneValidadeCovid.setVisible(false);
     }
 
     @FXML
@@ -172,6 +207,8 @@ public class ControleCadastroVacina {
         setVacina("Triplice viral");
         laboratorioLabel.setVisible(false);
         laboratorioTextField.setVisible(false);
+        validadeLabel.setVisible(false);
+        gridPaneValidadeCovid.setVisible(false);
     }
 
     @FXML
@@ -180,6 +217,8 @@ public class ControleCadastroVacina {
         setVacina("Variola");
         laboratorioLabel.setVisible(false);
         laboratorioTextField.setVisible(false);
+        validadeLabel.setVisible(false);
+        gridPaneValidadeCovid.setVisible(false);
     }
 
 }

@@ -1,5 +1,13 @@
+/*
+UNIVERSIDADE ESTADUAL DO SUDOESTE DA BAHIA – UESB
+DEPARTAMENTO DE CIENCIAS EXATAS E TECNOLÓGICAS- DCET
+CURSO DE CIÊNCIA DA COMPUTAÇÃO
+DISCIPLINA:  Algoritmos e Programação II 
+PROFESSORA: Maísa Soares dos Santos Lopes
+NOME DA EQUIPE: Codando Alpacas
+ALUNOS: Gustavo Pereira Nunes, Jonathan Silva Reis, Jorge Fernando dos Humildes Neto, Lara Santos Pereira Soares e Lisandra Sapucaia Gumes
+*/
 package Visao;
-
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -22,6 +30,7 @@ public class App extends Application{
     private static Scene posLogin;
     private static Scene cadastroVacina;
     private static Scene pesquisarVacina;
+    private static Scene cadastroPaciente;
 
     public static void main(String[] args) throws Exception {
         launch (args);
@@ -33,7 +42,7 @@ public class App extends Application{
         cenario.setTitle("Imuni App");
         Parent fxmlMain = FXMLLoader.load(getClass().getResource("Menu.fxml"));
         mainScene = new Scene (fxmlMain);
-        Parent fxmlCadastro = FXMLLoader.load(getClass().getResource("Cadastro.fxml"));
+        Parent fxmlCadastro = FXMLLoader.load(getClass().getResource("CadastroAplicador.fxml"));
         cadastroScene = new Scene (fxmlCadastro);
         Parent fxmlAjudaCadastro = FXMLLoader.load(getClass().getResource("AjudaCadastro.fxml"));
         ajudaCadastro = new Scene (fxmlAjudaCadastro);
@@ -53,6 +62,8 @@ public class App extends Application{
         cadastroVacina = new Scene (fxmlCadastroVacina);
         Parent fxmlPesquisarVacina = FXMLLoader.load(getClass().getResource("PesquisarVacina.fxml"));
         pesquisarVacina = new Scene (fxmlPesquisarVacina);
+        Parent fxmlCadastrarPaciente = FXMLLoader.load(getClass().getResource("CadastroPaciente.fxml"));
+        cadastroPaciente = new Scene (fxmlCadastrarPaciente);
 
         cenario.setScene(mainScene);
         cenario.show();   
@@ -104,6 +115,10 @@ public class App extends Application{
 
     public static void changeScreenPesquisarVacina() {
         stage.setScene(pesquisarVacina);
+    }
+
+    public static void changeScreenCadastrarPaciete() {
+        stage.setScene(cadastroPaciente);
     }
 
 }

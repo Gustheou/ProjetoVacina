@@ -2,15 +2,12 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.TextFlow?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ControlePesquisarUsuario">
    <children>
@@ -29,41 +26,14 @@
             <Image url="@../Imagens/notebook_114867.png" />
          </image>
       </ImageView>
-      <Label layoutX="40.0" layoutY="150.0" text="Digite o nome: ">
+      <Label layoutX="44.0" layoutY="150.0" text="Digite o cpf:">
          <font>
             <Font name="Times New Roman" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="40.0" layoutY="192.0" text="Digite o cpf:">
-         <font>
-            <Font name="Times New Roman" size="15.0" />
-         </font>
-      </Label>
-      <TextField fx:id="nomeTextField" layoutX="143.0" layoutY="147.0" prefHeight="25.0" prefWidth="142.0" />
-      <TextField fx:id="cpfTextField" layoutX="143.0" layoutY="189.0" prefHeight="25.0" prefWidth="142.0" />
-      <Button layoutX="181.0" layoutY="235.0" mnemonicParsing="false" onAction="#pesquisarButton" text="Pesquisar" />
-      <GridPane fx:id="gridPane" layoutX="380.0" layoutY="102.0" prefHeight="279.0" prefWidth="200.0" visible="false">
-        <columnConstraints>
-          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0" prefWidth="59.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.0" minWidth="10.0" prefWidth="141.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="51.0" minHeight="10.0" prefHeight="36.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="69.0" minHeight="2.0" prefHeight="35.0" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="183.0" minHeight="10.0" prefHeight="176.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Label text="Nome:" />
-            <Label text="Endereço:" GridPane.rowIndex="1" />
-            <Label text="Email:" GridPane.rowIndex="2" />
-            <Label text="Vacinas:" GridPane.rowIndex="3" GridPane.valignment="TOP" />
-            <TextFlow fx:id="mostrarVacinasText" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField fx:id="mostrarNomeTextField" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="73.0" GridPane.columnIndex="1" />
-            <TextField fx:id="mostrarEnderecoTextField" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="73.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField fx:id="mostrarEmailTextField" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="73.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-         </children>
-      </GridPane>
-      <Button layoutX="190.0" layoutY="306.0" mnemonicParsing="false" onAction="#voltarButton" text="Voltar" />
+      <TextField fx:id="cpfTextField" layoutX="147.0" layoutY="147.0" prefHeight="25.0" prefWidth="142.0" />
+      <Button layoutX="181.0" layoutY="222.0" mnemonicParsing="false" onAction="#pesquisarButton" text="Pesquisar" />
+      <Button layoutX="191.0" layoutY="287.0" mnemonicParsing="false" onAction="#voltarButton" text="Voltar" />
+      <TextArea fx:id="textArea" editable="false" layoutX="354.0" layoutY="147.0" prefHeight="200.0" prefWidth="200.0" visible="false" />
    </children>
 </AnchorPane>

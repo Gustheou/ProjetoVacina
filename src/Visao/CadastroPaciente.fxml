@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="AncherPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="357.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controle.ControleCadastroPaciente">
+   <children>
+      <Label layoutX="99.0" layoutY="53.0" text="Cadastro de paciente">
+         <font>
+            <Font name="Impact" size="25.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="35.0" layoutY="110.0" prefHeight="215.0" prefWidth="295.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="235.0" minWidth="10.0" prefWidth="161.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="336.0" minWidth="10.0" prefWidth="134.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Nome:">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="Data de nascimento:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label text="CPF:" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nomeTextField" maxWidth="-Infinity" prefWidth="220.0" GridPane.columnIndex="1" />
+            <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="104.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="88.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="104.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="88.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="116.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="/" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="/" GridPane.columnIndex="3">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="diaTextField" />
+                  <TextField fx:id="mesTextField" GridPane.columnIndex="2" />
+                  <TextField fx:id="anoTextField" GridPane.columnIndex="4" />
+               </children>
+            </GridPane>
+            <Label text="Endereço:" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="enderecoTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="cpfTextField" maxWidth="-Infinity" prefWidth="220.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="E-Mail:" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Times New Roman Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <AnchorPane layoutY="353.0" prefHeight="47.0" prefWidth="357.0" style="-fx-background-color: #A47EFC;">
+         <children>
+            <ImageView fitHeight="37.0" fitWidth="79.0" layoutX="142.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagens/WhatsApp_Image_2021-11-13_at_6.00.23_PM-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="244.0" layoutY="10.0" mnemonicParsing="false" onAction="#concluirCadastro" text="Cadastrar" />
+            <Button layoutX="57.0" layoutY="10.0" mnemonicParsing="false" onAction="#voltarParaMenu" text="Voltar" />
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="64.0" fitWidth="88.0" layoutX="19.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagens/health_chart_patient_chart_report_icon_143438.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="-6.0" layoutY="-9.0" prefHeight="47.0" prefWidth="364.0" style="-fx-background-color: #A47EFC;">
+         <children>
+            <ImageView fitHeight="47.0" fitWidth="37.0" layoutX="164.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagens/building_construction_control_protection_security_-20-51_icon-icons.com_60302.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
