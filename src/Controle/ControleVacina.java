@@ -15,6 +15,12 @@ public class ControleVacina {
         v.cadastrarVacina(v);
     }
 
+    public void cadastrarVacina2 (String nome, String dataVacinacao, String lote, String aplicador, String localVacinacao) throws IOException, ClassNotFoundException,FileNotFoundException {
+
+        Vacina v = new Vacina(nome, dataVacinacao, lote, aplicador, localVacinacao);
+        v.cadastrarVacina(v);
+    }
+
     public ArrayList<Vacina> listarVacina () throws IOException, FileNotFoundException, ClassNotFoundException {
         Vacina v = new Vacina();
         return v.listarVacinas();

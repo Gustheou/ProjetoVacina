@@ -173,6 +173,24 @@ public class ControlePosLogin {
 
     @FXML
     void sairButton(ActionEvent event) {
+        cadastrarPacienteLabel.setVisible(false);
+        pesquisarPacienteLabel.setVisible(false);
+        listarPacienteLabel.setVisible(false);
+        pacienteHelpLabel.setVisible(false);
+        imagemCadastroPaciente.setVisible(false);
+        imagemListarPaciente.setVisible(false);
+        imagemPesquisarPaciente.setVisible(false);
+        novaVacinaLabel.setVisible(false);
+        imagemNovaVacinaPaciente.setVisible(false);
+
+        imagemCadastroVacina.setVisible(false);
+        imagemPesquisarVacina.setVisible(false);
+        imagemListarVacina.setVisible(false);
+        cadastrarVacinaLabel.setVisible(false);
+        pesquisarVacinaLabel.setVisible(false);
+        listarVacinaLabel.setVisible(false);
+        vacinaHelpLabel.setVisible(false);
+        
         App.changeScreenMenu(event);
     }
 

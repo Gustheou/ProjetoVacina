@@ -48,7 +48,7 @@ public class ControleCadastroVacina {
     @FXML
     private GridPane gridPaneValidadeCovid;
 
-    private String vacinaTipo;
+    public String vacinaTipo;
 
     ControleVacina cV = new ControleVacina();
 
@@ -73,13 +73,8 @@ public class ControleCadastroVacina {
     @FXML
     void cadastrarVacinaButton(ActionEvent event) {
         try {
-            String vacinaTipo = getVacina();
-            int dia = Integer.parseInt(validadeDiaTextField.getText());
-            int mes = Integer.parseInt(validadeMesTextField.getText());
-            int ano = Integer.parseInt(validadeAnoTextField.getText());
-            String dataDeValidade = String.valueOf(dia);
-            dataDeValidade += " / "+ String.valueOf(mes);
-            dataDeValidade += " / "+ String.valueOf(ano);
+            String vacinaTipo = String.valueOf(getVacina());
+            
 
             String dataVacinacao = "";
             //String dataVacinacao = DataVacinacaoTextField.getText();
@@ -88,23 +83,30 @@ public class ControleCadastroVacina {
             String aplicador = String.valueOf(aplicadorTextField.getText());
             String localVacinacao = String.valueOf(LocalDeDestinoTextField.getText());
             String laboratorio = String.valueOf(laboratorioTextField.getText());
-           
-            cV.cadastrarVacina(vacinaTipo, dataVacinacao, lote, aplicador, localVacinacao, laboratorio, dataDeValidade);
-            JOptionPane.showMessageDialog(null, "Vacina cadastrada com sucesso!\nLote: "+ lote);
-            App.changeScreenMenu(event);
+            
+            if (vacinaTipo.equals("Covid")) {
+                int dia = Integer.parseInt(validadeDiaTextField.getText());
+                int mes = Integer.parseInt(validadeMesTextField.getText());
+                int ano = Integer.parseInt(validadeAnoTextField.getText());
+                String dataDeValidade = String.valueOf(dia);
+                dataDeValidade += " / "+ String.valueOf(mes);
+                dataDeValidade += " / "+ String.valueOf(ano);
+                cV.cadastrarVacina(vacinaTipo, dataVacinacao, lote, aplicador, localVacinacao, laboratorio, dataDeValidade);
+            } else {
+                cV.cadastrarVacina2(vacinaTipo, dataVacinacao, lote, aplicador, localVacinacao);
+            }
+            JOptionPane.showMessageDialog(null, "Vacina "+ vacinaTipo +" cadastrada com sucesso!\nLote: "+ lote);
+            App.changeScreenPosLogin();
             //É para cadastrar a vacina, ou o usuário vacinando?
         } catch (NumberFormatException e) {
             validadeDiaTextField.setText("dia");
-            validadeDiaTextField.requestFocus();
-            validadeDiaTextField.selectAll();
+            
 
             validadeMesTextField.setText("mês");
-            validadeMesTextField.requestFocus();
-            validadeAnoTextField.selectAll();
+            
 
             validadeAnoTextField.setText("ano");
-            validadeAnoTextField.requestFocus();
-            validadeAnoTextField.selectAll();
+            
 
         } catch (ClassNotFoundException e) {
             e.printStackTrace();

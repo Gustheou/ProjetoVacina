@@ -1,5 +1,6 @@
 package Controle;
 
+import Modelo.vacina.Vacina;
 import Visao.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -19,7 +20,8 @@ public class ControlePesquisarVacina {
     void pesquisarButton(ActionEvent event) {
         try {
             String lote = String.valueOf(numeroDoLoteTextField.getText());
-            String dados = String.valueOf(cV.pesquisarVacina(lote));
+            Vacina vzin = cV.pesquisarVacina(lote);
+            String dados = String.valueOf(vzin);
             textArea.setText(dados);
             textArea.setVisible(true);
         } catch (Exception e) {
