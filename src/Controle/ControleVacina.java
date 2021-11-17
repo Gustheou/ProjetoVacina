@@ -30,7 +30,7 @@ public class ControleVacina {
         String vacina ="";
         ArrayList<Vacina> v = listarVacina();
         for (int i=0; i<v.size(); i++){
-            vacina += v.get(i).toString() + "\n=-=-=-=-=-=-=-=-=-=-=-=\n";
+            vacina += v.get(i).tostring() + "\n=-=-=-=-=-=-=-=-=-=-=-=\n";
         }
         return vacina;
     }
