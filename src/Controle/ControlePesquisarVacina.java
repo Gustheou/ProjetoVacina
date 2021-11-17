@@ -21,7 +21,7 @@ public class ControlePesquisarVacina {
         try {
             String lote = String.valueOf(numeroDoLoteTextField.getText());
             Vacina vzin = cV.pesquisarVacina(lote);
-            String dados = String.valueOf(vzin);
+            String dados = String.valueOf(vzin.tostring());
             textArea.setText(dados);
             textArea.setVisible(true);
         } catch (Exception e) {

@@ -98,9 +98,8 @@ public class Vacina implements Serializable{
 
     public String tostring(){
         return "\nDados: \n" +
-                "Nome:" + getNome() + '\n'+
+                "Nome: " + getNome() + '\n'+
                 "Lote: " + getLote() + '\n'+
-                "Aplicador: " + ap.getNome() + '\n'+
                 "Local de Vacinacao: " + getLocalVacinacao() + '\n'+
                 "Laboratório: " + getLaboratorio() + '\n'+
                 "Validade de Lote: " + getValidadeLote() + '\n';
