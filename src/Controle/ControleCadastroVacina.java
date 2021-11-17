@@ -82,19 +82,12 @@ public class ControleCadastroVacina {
             String dataVacinacao = "";
             //String dataVacinacao = DataVacinacaoTextField.getText();
             
-            String lote = LoteTextField.getText();
-            String aplicador = aplicadorTextField.getText();
-
-            String localVacinacao = "";
-            //String localVacinacao = LocalDeVacinacaoTextField.getText();
-
-            String laboratorio = "";
-            //String laboratorio = LaboratorioTextField.getText();
-
-            String validadeLote = "";
-            //String validadeLote = ValidadeLoteTextField.getText();
+            String lote = String.valueOf(LoteTextField.getText());
+            String aplicador = String.valueOf(aplicadorTextField.getText());
+            String localVacinacao = String.valueOf(LocalDeDestinoTextField.getText());
+            String laboratorio = String.valueOf(laboratorioTextField.getText());
            
-            cV.cadastrarVacina(vacinaTipo, dataVacinacao, lote, aplicador, localVacinacao, laboratorio, validadeLote);
+            cV.cadastrarVacina(vacinaTipo, dataVacinacao, lote, aplicador, localVacinacao, laboratorio, dataDeValidade);
             //É para cadastrar a vacina, ou o usuário vacinando?
         } catch (NumberFormatException e) {
             validadeDiaTextField.setText("dia");

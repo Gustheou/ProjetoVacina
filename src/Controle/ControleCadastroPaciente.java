@@ -1,5 +1,8 @@
 package Controle;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 import javax.swing.JOptionPane;
 
 import Visao.App;
@@ -34,6 +37,7 @@ public class ControleCadastroPaciente {
     @FXML
     private TextField emailTextField;
 
+    ControlePessoa cP = new ControlePessoa();
     @FXML
     void concluirCadastro(ActionEvent event) {
         try {
@@ -55,7 +59,7 @@ public class ControleCadastroPaciente {
                 String dataDeNascimento = (String.valueOf(dia)+" / ");
                 dataDeNascimento += (String.valueOf(mes)+" / ");
                 dataDeNascimento += (String.valueOf(ano));
-                //cP.cadastrarPessoa(nome, cpf, dataDeNascimento, endereco);
+                cP.cadastrarPaciente(nome, cpf, dataDeNascimento, endereco);
             }
             
         } catch (NumberFormatException e) {
@@ -70,6 +74,15 @@ public class ControleCadastroPaciente {
             anoTextField.setText("Ano:");
             anoTextField.selectAll();
             anoTextField.requestFocus();
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
         nomeTextField.setText("");
         diaTextField.setText("");

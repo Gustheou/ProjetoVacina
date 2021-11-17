@@ -1,5 +1,7 @@
 package Controle;
 
+import javax.swing.JOptionPane;
+
 import Visao.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -57,6 +59,10 @@ public class ControlePosLogin {
     @FXML
     private ImageView imagemListarVacina;
 
+    ControlePessoa cP = new ControlePessoa();
+
+    ControleVacina cV = new ControleVacina();
+
     @FXML
     void cadastrarPaciente(MouseEvent event) {
         App.changeScreenCadastrarPaciete();
@@ -79,12 +85,20 @@ public class ControlePosLogin {
 
     @FXML
     void imagemListarPaciente(MouseEvent event) {
-
+        try {
+            JOptionPane.showMessageDialog(null, cP.imprimirPaciente());
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
     }
 
     @FXML
     void imagemListarVacina(MouseEvent event) {
+        try {
+            JOptionPane.showMessageDialog(null, cV.imprimirVacina());
+        }catch(Exception e){
 
+        }
     }
 
     @FXML
@@ -94,6 +108,7 @@ public class ControlePosLogin {
 
     @FXML
     void imagemPesquisarPaciente(MouseEvent event) {
+        App.changeScreenPesquisarPaciente();
     }
 
     @FXML
@@ -103,12 +118,20 @@ public class ControlePosLogin {
 
     @FXML
     void listarPaciente(MouseEvent event) {
+        try {
+            JOptionPane.showMessageDialog(null, cP.imprimirPaciente());
+        }catch(Exception e){
 
+        }
     }
 
     @FXML
     void listarVacina(MouseEvent event) {
+        try {
+            JOptionPane.showMessageDialog(null, cV.imprimirVacina());
+        }catch(Exception e){
 
+        }
     }
 
     @FXML
@@ -140,7 +163,7 @@ public class ControlePosLogin {
 
     @FXML
     void pesquisarPaciente(MouseEvent event) {
-        
+        App.changeScreenPesquisarPaciente();
     }
 
     @FXML

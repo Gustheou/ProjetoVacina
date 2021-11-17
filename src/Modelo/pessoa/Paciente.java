@@ -57,7 +57,7 @@ public class Paciente implements Serializable {
         return "\nDados: \n" +
                 "Nome:" + getNome() + '\n'+
                 "CPF: " + getCpf() + '\n'+
-                "Data de Nascimento: =" + getDataNascimento() + '\n'+
+                "Data de Nascimento: " + getDataNascimento() + '\n'+
                 "Endereço: " + getEndereco() + '\n';
 
         }

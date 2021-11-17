@@ -31,7 +31,7 @@ public class ControlePesquisarUsuario {
     void pesquisarButton(ActionEvent event) {
         try {
             String cpf = String.valueOf(cpfTextField.getText());
-            Aplicador cpfzin = cA.pesquisarAplicador(cpf); //Pesquisar nome nos arquivos
+            Aplicador cpfzin = cA.pesquisarAplicador(cpf);
             String dados = String.valueOf(cpfzin);
             textArea.setText(dados);
             textArea.setVisible(true);

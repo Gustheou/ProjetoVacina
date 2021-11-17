@@ -1,52 +1,40 @@
 package Controle;
 
+import Modelo.pessoa.Paciente;
+import Visao.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
-import javafx.scene.text.TextFlow;
 
 public class ControlePesquisarPaciente {
-
-    @FXML
-    private TextField nomeTextField;
 
     @FXML
     private TextField cpfTextField;
 
     @FXML
-    private GridPane gridPane;
+    private TextArea textArea;
 
-    @FXML
-    private TextFlow mostrarVacinasText;
-
-    @FXML
-    private TextField mostrarNomeTextField;
-
-    @FXML
-    private TextField mostrarEnderecoTextField;
-
-    @FXML
-    private TextField mostrarEmailTextField;
-
+    ControlePessoa cP = new ControlePessoa();
     @FXML
     void pesquisarButton(ActionEvent event) {
         try {
-            String nome = String.valueOf(nomeTextField.getText());
             String cpf = String.valueOf(cpfTextField.getText());
-            
+            Paciente cpfzin = cP.pesquisarPaciente(cpf);
+            String dados = String.valueOf(cpfzin);
+            textArea.setText(dados);
+            textArea.setVisible(true);
         } catch (Exception e) {
-            //TODO: handle exception
+            e.printStackTrace();
         }
-        gridPane.setVisible(false);
-        mostrarEmailTextField.setText("");
-        mostrarEnderecoTextField.setText("");
-        mostrarNomeTextField.setText("");
+        
     }
 
     @FXML
     void voltarButton(ActionEvent event) {
-
+        App.changeScreenPosLogin();
+        textArea.setText("");
+        textArea.setVisible(false);
     }
 
 }

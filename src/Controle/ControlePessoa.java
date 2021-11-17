@@ -84,19 +84,27 @@ public class ControlePessoa {
 
         Paciente p = new Paciente(nome, cpf, dataNascimento, endereco);
             p.cadastrarPaciente(p);
-        }
+    }
     
+    public String imprimirPaciente() throws IOException, FileNotFoundException, ClassNotFoundException{
+        String paciente ="";
+        ArrayList<Paciente> p = listarPaciente();
+        for (int i=0; i<p.size(); i++){
+            paciente += p.get(i).toString() + "\n=-=-=-=-=-=-=-=-=-=-=-=\n";
+        }
+        return paciente;
+    }
 
     public ArrayList<Paciente> listarPaciente () throws IOException, FileNotFoundException, ClassNotFoundException {
         Paciente p = new Paciente();
         return p.listarPaciente();
     }
 
-    public Paciente pesquisarPaciente (String nome) throws IOException, ClassNotFoundException, FileNotFoundException {
+    public Paciente pesquisarPaciente (String cpf) throws IOException, ClassNotFoundException, FileNotFoundException {
         Paciente p  = null;
         ArrayList<Paciente> pacientes = listarPaciente();
         for (int i = 0; i < pacientes.size(); i++) {
-            if (nome == pacientes.get(i).getNome()) {
+            if (cpf.equals(pacientes.get(i).getCpf())) {
                 p = pacientes.get(i);
                 break;
             }

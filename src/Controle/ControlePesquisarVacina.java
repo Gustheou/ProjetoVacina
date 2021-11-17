@@ -3,40 +3,36 @@ package Controle;
 import Visao.App;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
 
 public class ControlePesquisarVacina {
 
     @FXML
-    private TextField numeroDoLoeTextField;
+    private TextField numeroDoLoteTextField;
 
     @FXML
-    private GridPane gridPane;
+    private TextArea textArea;
 
-    @FXML
-    private TextField mostrarNomeVacinaTextField;
-
-    @FXML
-    private TextField mostrarValidadeTextField;
-
-    @FXML
-    private TextField mostrarLocalDestinoTextField;
-
+    ControleVacina cV = new ControleVacina();
     @FXML
     void pesquisarButton(ActionEvent event) {
-        gridPane.setVisible(true);
-        //Pesquisar e settar texto
+        try {
+            String lote = String.valueOf(numeroDoLoteTextField.getText());
+            String dados = String.valueOf(cV.pesquisarVacina(lote));
+            textArea.setText(dados);
+            textArea.setVisible(true);
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
+        
     }
 
     @FXML
     void voltarButton(ActionEvent event) {
         App.changeScreenPosLogin();
-        mostrarNomeVacinaTextField.setText("");
-        mostrarLocalDestinoTextField.setText("");
-        mostrarValidadeTextField.setText("");
-        gridPane.setVisible(false);
-
+        textArea.setVisible(false);
+        textArea.setText("");
     }
 
 }

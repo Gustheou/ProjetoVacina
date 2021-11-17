@@ -16,20 +16,24 @@ public class ControleVacina {
     }
 
     public ArrayList<Vacina> listarVacina () throws IOException, FileNotFoundException, ClassNotFoundException {
-        Vacina v = new Vacina() {
-            @Override
-            public String tostring() {
-                return null;
-            }
-        };
+        Vacina v = new Vacina();
         return v.listarVacinas();
     }
+    
+    public String imprimirVacina() throws IOException, FileNotFoundException, ClassNotFoundException{
+        String vacina ="";
+        ArrayList<Vacina> v = listarVacina();
+        for (int i=0; i<v.size(); i++){
+            vacina += v.get(i).toString() + "\n=-=-=-=-=-=-=-=-=-=-=-=\n";
+        }
+        return vacina;
+    }
 
-    public Vacina pesquisarVacina(String nome) throws IOException, ClassNotFoundException, FileNotFoundException {
+    public Vacina pesquisarVacina(String lote) throws IOException, ClassNotFoundException, FileNotFoundException {
         Vacina v  = null;
         ArrayList<Vacina> vacinas = listarVacina();
         for (int i = 0; i < vacinas.size(); i++) {
-            if (nome == vacinas.get(i).getNome()) {
+            if (lote.equals(vacinas.get(i).getLote())) {
                 v = vacinas.get(i);
                 break;
             }
