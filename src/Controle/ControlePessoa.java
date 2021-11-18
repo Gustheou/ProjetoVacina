@@ -25,9 +25,9 @@ public class ControlePessoa {
     }
     public String imprimirAplicador() throws IOException, FileNotFoundException, ClassNotFoundException{
         String aplicador ="";
-        ArrayList<Aplicador> e = listarAplicador();
-        for (int i=0; i<e.size(); i++){
-            aplicador += e.get(i).toString() + "\n=-=-=-=-=-=-=-=-=-=-=-=\n";
+        ArrayList<Aplicador> a = listarAplicador();
+        for (int i=0; i<a.size(); i++){
+            aplicador += a.get(i).toString() + "\n=-=-=-=-=-=-=-=-=-=-=-=\n";
         }
         return aplicador;
     }

@@ -6,6 +6,8 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 
+import javax.swing.JOptionPane;
+
 public class ControleVacina {
 
     public void cadastrarVacina (String nome, String dataVacinacao, String lote, String aplicador, String localVacinacao, 
@@ -41,10 +43,11 @@ public class ControleVacina {
         for (int i = 0; i < vacinas.size(); i++) {
             if (lote.equals(vacinas.get(i).getLote())) {
                 v = vacinas.get(i);
-                break;
+                return v;
             }
         }
-        return v;
+        JOptionPane.showMessageDialog(null,"Vacina não encontrada, digite o lote novamente!");
+        return null;
     }
 
 }

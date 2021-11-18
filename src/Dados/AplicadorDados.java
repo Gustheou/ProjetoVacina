@@ -28,7 +28,7 @@ public class AplicadorDados {
         File arq = new File("listaAplicador.ser");
         FileInputStream fluxo = new FileInputStream(arq);
         ObjectInputStream lerObj = new ObjectInputStream(fluxo);
-
+        
         aplicadores = (ArrayList<Aplicador>) lerObj.readObject();
         return aplicadores;
     }

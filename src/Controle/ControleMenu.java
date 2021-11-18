@@ -81,7 +81,6 @@ public class ControleMenu {
     @FXML
     void ListarUsuarioMenuBar(ActionEvent event) throws HeadlessException, FileNotFoundException, ClassNotFoundException, IOException {
         JOptionPane.showMessageDialog(null, cP.imprimirAplicador());
-        //Não sei ao certo se isso está correto. ~ Gugu
     }
 
 }

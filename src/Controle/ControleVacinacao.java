@@ -1,4 +1,8 @@
 package Controle;
+import Modelo.vacina.Vacina;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import Modelo.pessoa.Paciente;
 import Visao.App;
@@ -10,6 +14,8 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
 public class ControleVacinacao {
+
+    ControleVacina cV = new ControleVacina();
 
     @FXML
     private TextField cpfTextField;
@@ -41,7 +47,18 @@ public class ControleVacinacao {
     @FXML
     void continuar2Button(ActionEvent event) {
         //pesquisar lote
-        textAreaLote.setVisible(true);
+        try {
+            String lote = String.valueOf(loteTextField.getText());
+            Vacina vzin = cV.pesquisarVacina(lote);
+            String dados = String.valueOf(vzin.tostring());
+            textAreaLote.setText(dados);
+            textAreaLote.setVisible(true);
+            vacinarButtonAparecer.setVisible(true);
+            
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
+
     }
     ControlePessoa cP = new ControlePessoa();
 
@@ -63,9 +80,6 @@ public class ControleVacinacao {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
-        
-        
     }
 
     @FXML
