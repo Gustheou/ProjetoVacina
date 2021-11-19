@@ -1,14 +1,9 @@
 package Controle;
-
 import Modelo.pessoa.Aplicador;
 import Modelo.pessoa.Paciente;
-
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
-
-import javax.swing.JOptionPane;
-
 public class ControlePessoa {
 
     public void cadastrarAplicador (String nome, String cpf, String dataNascimento, String endereco, String senha) throws IOException,

@@ -1,9 +1,5 @@
 package Controle;
 import Modelo.vacina.Vacina;
-
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
 import Modelo.pessoa.Paciente;
 import Visao.App;
 import javafx.event.ActionEvent;

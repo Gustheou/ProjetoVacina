@@ -9,7 +9,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import Controle.ControlePessoa;
 
 public class ControleCadastroAplicador {
 
@@ -52,9 +51,7 @@ public class ControleCadastroAplicador {
             String endereco = enderecoTextField.getText();
             String password = senhaTextField.getText();
             String email = emailTextField.getText();
-            
-            int idade = 2021 - ano; //ANIVERSARIO COREANO. Procurar biblioteca
-            if (nome.equals("") || dia == 0 || mes == 0 || ano == 0 || cpf.equals("") || endereco.equals("") || password.equals("") || email.equals("") || idade == 0) {
+            if (nome.equals("") || dia == 0 || mes == 0 || ano == 0 || cpf.equals("") || endereco.equals("") || password.equals("") || email.equals("")) {
                 JOptionPane.showMessageDialog(null, "          Error Code: 604\n\nCadastro não foi efetuado. (′⌒`)\nMotivo: Informações incompletas.");
             } else {
                 JOptionPane.showMessageDialog(null, "Cadastro do aplicador efetuado com sucesso!\nLogin: "+ cpf +"\nSenha: "+ password);

@@ -48,9 +48,7 @@ public class ControleCadastroPaciente {
             String cpf = cpfTextField.getText();
             String endereco = enderecoTextField.getText();
             String email = emailTextField.getText();
-            
-            int idade = 2021 - ano; //ANIVERSARIO COREANO. Procurar biblioteca
-            if (nome.equals("") || dia == 0 || mes == 0 || ano == 0 || cpf.equals("") || endereco.equals("") || email.equals("") || idade == 0) {
+            if (nome.equals("") || dia == 0 || mes == 0 || ano == 0 || cpf.equals("") || endereco.equals("") || email.equals("")) {
                 JOptionPane.showMessageDialog(null, "          Error Code: 604\n\nCadastro não foi efetuado. (′⌒`)\nMotivo: Informações incompletas.");
             } else {
                 JOptionPane.showMessageDialog(null, "Cadastro do paciente efetuado com sucesso!");
@@ -61,7 +59,6 @@ public class ControleCadastroPaciente {
                 dataDeNascimento += (String.valueOf(ano));
                 cP.cadastrarPaciente(nome, cpf, dataDeNascimento, endereco);
             }
-            
         } catch (NumberFormatException e) {
             diaTextField.setText("Dia:");
             diaTextField.selectAll();
@@ -91,12 +88,10 @@ public class ControleCadastroPaciente {
         cpfTextField.setText("");
         enderecoTextField.setText("");
         emailTextField.setText("");
-        
     }
 
     @FXML
     void voltarParaMenu(ActionEvent event) {
         App.changeScreenPosLogin();
     }
-
 }

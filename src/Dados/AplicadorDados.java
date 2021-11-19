@@ -1,7 +1,5 @@
 package Dados;
 import Modelo.pessoa.*;
-import Modelo.vacina.*;
-
 import java.io.*;
 import java.util.ArrayList;
 import java.io.FileNotFoundException;
